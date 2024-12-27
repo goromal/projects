@@ -2,7 +2,7 @@
 
 An investigation into different forms of attitude control.
 
-![](/img/apollo.gif "Apollo spacecraft")
+![](../img/apollo.gif "Apollo spacecraft")
 
 ***TODO Full project description in progress...***
 
@@ -22,34 +22,34 @@ A few years after taking an advanced dynamics course at BYU, I decided to re-vis
 
 $$\boldsymbol{u}=-k_q\left(\begin{bmatrix}\phi-\phi_d && \theta-\theta_d && \psi-\psi_d\end{bmatrix}^{\top}\right)+\dots$$
 
-![](/img/euler_nonlin_simple-controller-with-full-command1-svg-to-png.png)
+![](../img/euler_nonlin_simple-controller-with-full-command1-svg-to-png.png)
 
-![](/img/euler_nonlin_simple-controller-with-full-command2-svg-to-png.png)
+![](../img/euler_nonlin_simple-controller-with-full-command2-svg-to-png.png)
 
-![](/img/euler_nonlin_simple-controller-with-full-command3-svg-to-png.png)
+![](../img/euler_nonlin_simple-controller-with-full-command3-svg-to-png.png)
 
-![](/img/euler_nonlin_simple-controller-with-full-command4-svg-to-png.png)
+![](../img/euler_nonlin_simple-controller-with-full-command4-svg-to-png.png)
 
-![](/img/euler_nonlin_simple-controller-with-full-command5-svg-to-png.png)
+![](../img/euler_nonlin_simple-controller-with-full-command5-svg-to-png.png)
 
-![](/img/euler_nonlin_simple-controller-with-full-command6-svg-to-png.png)
+![](../img/euler_nonlin_simple-controller-with-full-command6-svg-to-png.png)
 
 #### Controller with Tangent Space Error
 
 $$\boldsymbol{u}=-k_q(\boldsymbol{q}\ominus\boldsymbol{q}_d)+\dots$$
 
 
-![](/img/manif_nonlin_simple-controller-with-full-command1-svg-to-png.png)
+![](../img/manif_nonlin_simple-controller-with-full-command1-svg-to-png.png)
 
-![](/img/manif_nonlin_simple-controller-with-full-command2-svg-to-png.png)
+![](../img/manif_nonlin_simple-controller-with-full-command2-svg-to-png.png)
 
-![](/img/manif_nonlin_simple-controller-with-full-command3-svg-to-png.png)
+![](../img/manif_nonlin_simple-controller-with-full-command3-svg-to-png.png)
 
-![](/img/manif_nonlin_simple-controller-with-full-command4-svg-to-png.png)
+![](../img/manif_nonlin_simple-controller-with-full-command4-svg-to-png.png)
 
-![](/img/manif_nonlin_simple-controller-with-full-command5-svg-to-png.png)
+![](../img/manif_nonlin_simple-controller-with-full-command5-svg-to-png.png)
 
-![](/img/manif_nonlin_simple-controller-with-full-command6-svg-to-png.png)
+![](../img/manif_nonlin_simple-controller-with-full-command6-svg-to-png.png)
 
 
 ## Conclusions

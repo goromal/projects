@@ -22,7 +22,7 @@ To understand everything the algorithm is doing, a lot of terms need to be defin
 
 All vector quantities in the camera extrinsics calibration problem are expressed in one of the following frames:
 
-![](/img/cc_frames.svg "Frame and variable definitions")
+![](../img/cc_frames.svg "Frame and variable definitions")
 
 - **The inertial/global frame (\\(\mathcal{I}\\)):** This is the north-east-down (NED) frame, assumed to be stationary over the course of the calibration routine.
 - **The UAV body frame (\\(\mathcal{B}\\)):** This frame is body-centric and body-fixed to the UAV. The x-axis sticks out the front of the UAV, the y-axis out the right side, and the z-axis out the bottom, towards the ground.
@@ -79,7 +79,7 @@ $$ ^\mathcal{C}l_i = \begin{bmatrix}\chi/\zeta & \gamma/\zeta & 1\end{bmatrix}^T
 
 In our camera measurement model, it is assumed that the UAV camera lens imposes some kind of radial distortion on measured pixel features:
 
- ![](/img/distortion_examples.png "Radial distortion illustration")
+ ![](../img/distortion_examples.png "Radial distortion illustration")
 
 Thus, in the model, radial distortion is applied to the point \\(^\mathcal{C}l_i\\) before it is projected onto the camera pixel plane.
 

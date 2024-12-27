@@ -2,7 +2,7 @@
 
 Undergraduate Capstone Project.
 
-![](/img/auvsi-plane.png)
+![](../img/auvsi-plane.png)
 
 * * *
 [System-Level Technical Design Paper](https://andrewtorgesen.com/res/TechnicalDesignPaper.pdf)

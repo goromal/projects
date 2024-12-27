@@ -2,7 +2,7 @@
 
 A tutorial / nice into to Lie algebras applied to control theory.
 
-![](/img/lie_cover.jpeg "Lie algebras")
+![](../img/lie_cover.jpeg "Lie algebras")
 
 * * *
 

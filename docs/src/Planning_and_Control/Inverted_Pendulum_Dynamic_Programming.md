@@ -2,7 +2,7 @@
 
 Class project for the graduate-level Optimal Control and Estimation course at MIT.
 
-![](/img/ip_policy.png "SLAM coverage algorithm")
+![](../img/ip_policy.png "SLAM coverage algorithm")
 
 * * *
 

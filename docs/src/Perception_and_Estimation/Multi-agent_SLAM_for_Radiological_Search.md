@@ -2,7 +2,7 @@
 
 Research that I did for the Department of Energy.
 
-![](/img/slam_coverage.gif "SLAM coverage algorithm")
+![](../img/slam_coverage.gif "SLAM coverage algorithm")
 
 * * *
 

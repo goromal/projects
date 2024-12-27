@@ -6,7 +6,7 @@ One random bit of this project that I'm weirdly proud of is that I had written s
 
 [Proportional navigation](https://en.wikipedia.org/wiki/Proportional_navigation) calculations are used to try to get the UAV to intercept the moving ground vehicle, and [simple potential fields](https://www.cs.cmu.edu/~./motionplanning/papers/sbp_papers/integrated1/borenstein_potential_field_limitations.pdf) are used to have the UAV concurrently avoid the cylinders.
 
-![](/img/ProNavUAV.png "Proportional navigation")
+![](../img/ProNavUAV.png "Proportional navigation")
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/RxqNI8_ko_M" frameborder="0" allowfullscreen></iframe>
 

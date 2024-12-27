@@ -2,7 +2,7 @@
 
 Research that I did for the Office of Naval Research.
 
-![](/img/indoor_tethered.gif "Indoor tethered flight")
+![](../img/indoor_tethered.gif "Indoor tethered flight")
 
 * * *
 
