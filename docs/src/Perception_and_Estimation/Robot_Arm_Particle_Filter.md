@@ -8,7 +8,7 @@ In robotics, the problem of finding an Inverse Kinematics (IK) solution given an
 
 Moreover, "soft robots," or penumatically powered arms constructed from fabric or rubbery material, are gaining popularity in robotics research. They show promise for working alongside humans without posing a threat in the event of accidental collisions due to their pliability.
 
-![](/img/softarm.gif "Soft robot arm.")
+![](../img/softarm.gif "Soft robot arm.")
 
 Without the use of a motion capture system, it is difficult to measure the joint positions of these robot arms directly, due to the absence of encoders.
 
@@ -20,7 +20,7 @@ For this project, I proposed the use of a Sampling Importance Resampling (SIR) p
 
 The ability of the particle filter to represent multimodal belief states makes it well-suited to tackle the problem of estimating joint configurations, unlike tools such as the Kalman Filter, which requires beliefs to resemble Gaussian probability distributions. The filter represents arbitrary distributions non-parametrically with weighted clusters of particles, as shown below:
 
-![](/img/multimodal.png "Non-parametric representation of a multimodal probability distribution.")
+![](../img/multimodal.png "Non-parametric representation of a multimodal probability distribution.")
 
 In that sense, the particle filter looks a little bit like a genetic algorithm.
 
@@ -28,7 +28,7 @@ Loosely, the particle filter resembles a typical Bayesian filter in that it comp
 
 As one can imagine, having a greater number of particles tends to lead to both better and slower results. Thus, after the update step has been applied, a resampling step can be carried out to replace outliers and decrease the computational load being wasted on propagating "unfruitful" particles. This is especially relevant for Bayesian filtering with a dynamic model (as opposed to static filtering), where many particles can become obsolete trying to hit a moving state-space target after only a few iterations. The update/resampling step is pictured below:
 
-![](/img/particleIK.png "Resampling update step of the particle filter.")
+![](../img/particleIK.png "Resampling update step of the particle filter.")
 
 Putting everything together, the algorithm at each time step looks roughly like this:
 
@@ -47,11 +47,11 @@ With the particle filter algorithm, I used the Baxter hardware platform to carry
 
 Here are the results, which compare the performance of the full particle filter with the performance of simply using the dynamic model to calculate joint states from joint torques:
 
-![](/img/report_fig.svg "Particle filter joint state estimation performance for all 7 of Baxter's joints.")
+![](../img/report_fig.svg "Particle filter joint state estimation performance for all 7 of Baxter's joints.")
 
 As an alternative illustration of the particle filter performance, here's an animation comparing how Baxter *actually moved* (\\(x\\)) over the course of the trajectory with how the particle filter *thought it moved* (\\(\hat{x}\\)) based on its estimates:
 
-![](/img/armComparison.gif "Reconstructed robot arm trajectory from particle filter estimates.")
+![](../img/armComparison.gif "Reconstructed robot arm trajectory from particle filter estimates.")
 
 Though the results of the particle filter weren't perfect, they were certainly better than the dynamic model alone. It should also be noted that this was my first time designing, implementing, and tuning a particle filter, so that certainly could have skewed the results. It is also cool to note that because the particle filter did not have to invert any matrices in its algorithm, it behaved well near robot arm singularities.
 

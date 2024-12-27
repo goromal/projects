@@ -4,7 +4,7 @@ Visualize a spreadsheet budget with Sankey Diagrams in the browser.
 
 This project was inspired by a cool post that I saw on [Reddit](https://www.reddit.com/r/dataisbeautiful/comments/adhzrw/watch_my_money_flow_an_animated_representation_of/), as well as by a personal need. I wanted to create a "visual aid" to accompany my standard budgeting spreadsheet that could communicate spending habits in a non-provocative (*no numbers, just colors and shapes*) and interesting way:
 
-![](/img/sankey.gif "Budget Visualization")
+![](../img/sankey.gif "Budget Visualization")
 
 To create the visualization, I modified existing JavaScript code which animates a Sankey diagram loaded from a json file. Most of the work went into writing a script which loads data from my Google Sheets budget and converts it into a Sankey json file.
 

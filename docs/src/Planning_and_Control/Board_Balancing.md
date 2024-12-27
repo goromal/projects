@@ -12,7 +12,7 @@ Basically, the challenge is to have a person balance on top of a board, which in
 
 **Schematic:**
 
-![](/img/BBDiagram.svg "Board Balancing Abstraction")
+![](../img/BBDiagram.svg "Board Balancing Abstraction")
 
 **Assumptions:**
 
@@ -29,7 +29,7 @@ All of my work and the final dynamics/controller equations can be found in [the 
 
 ## Matlab Implementation
 
-![](/img/bb_program.svg "Block diagram for the board balancing simulation")
+![](../img/bb_program.svg "Block diagram for the board balancing simulation")
 
 To test out my derived dynamics and controller, I created a simulation in Matlab that models the dynamics of the board balance system and controls it to commanded cylinder angle values. The following sections give code listings for all of the blocks in the above block diagram.
 
@@ -517,7 +517,7 @@ end
 
 The animation and plots below demonstrate the ability of the feedback controller to track step commands without overshoot and with a rise time of \\(\approx 0.5\\) seconds.
 
-![](/img/bbSim.gif "Board balancing full-state feedback performance")
+![](../img/bbSim.gif "Board balancing full-state feedback performance")
 
 Surely, there is a lot more that could have been done with this setup, from model validation to implementing disturbances and more advanced control techniques--perhaps even nonlinear control. That being said, this was primarily a fun exercise and an opportunity to apply the principles of my first controls course from the ground-up.
 

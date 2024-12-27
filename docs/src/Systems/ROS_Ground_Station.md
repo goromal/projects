@@ -2,7 +2,7 @@
 
 A ROS-based GUI for communicating with a fixed-wing UAV.
 
-![](/img/GroundStation.png)
+![](../img/GroundStation.png)
 
 * * *
 

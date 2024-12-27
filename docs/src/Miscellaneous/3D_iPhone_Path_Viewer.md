@@ -2,7 +2,7 @@
 
 An in-browser simple app for visualizing GPS trajectories superimposed on a 3D map.
 
-![](/img/map_cover.jpeg "Hike to Winnemucca.")
+![](../img/map_cover.jpeg "Hike to Winnemucca.")
 
 ## Motivation
 
@@ -34,4 +34,4 @@ If you don't have the Sensor Log app and want to try the path viewer out anyway,
 
 Here's a path I recorded a couple of years ago on a hike to Lake Winnemucca, visualized in my iPhone's browser:
 
-![](/img/winhike.jpeg "Hike to Winnemucca.")
+![](../img/winhike.jpeg "Hike to Winnemucca.")

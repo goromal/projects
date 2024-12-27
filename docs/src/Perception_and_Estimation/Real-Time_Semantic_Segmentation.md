@@ -2,7 +2,7 @@
 
 Class project for a Machine Learning course at MIT.
 
-![](/img/target_train.png "Segmentation")
+![](../img/target_train.png "Segmentation")
 
 * * *
 

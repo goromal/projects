@@ -2,7 +2,7 @@
 
 Class project for the graduate-level underactuated robotics course at MIT.
 
-![](/img/air_hockey.png "Air hockey")
+![](../img/air_hockey.png "Air hockey")
 
 * * *
 
