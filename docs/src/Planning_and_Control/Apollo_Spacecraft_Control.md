@@ -2,6 +2,8 @@
 
 An investigation into different forms of attitude control.
 
+All source code used can be found [here](https://github.com/goromal/apollo-att-ctrl/tree/main).
+
 ![](../img/apollo.gif "Apollo spacecraft")
 
 ***TODO Full project description in progress...***
