@@ -4,6 +4,8 @@ Research that I did for the Office of Naval Research.
 
 ![](../img/indoor_tethered.gif "Indoor tethered flight")
 
+This work is further expounded on in my [Master's Thesis](https://andrewtorgesen.com/res/thesis.pdf).
+
 * * *
 
 [Conference Paper](https://andrewtorgesen.com/res/AerowakeConfPaper.pdf)
