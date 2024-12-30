@@ -4,6 +4,8 @@ Research that I did for the Department of Energy.
 
 ![](../img/slam_coverage.gif "SLAM coverage algorithm")
 
+This work is further expounded on in my [Master's Thesis](https://andrewtorgesen.com/res/thesis.pdf).
+
 * * *
 
 [Project Page](http://acl.mit.edu/projects/cslam-rad-search)
