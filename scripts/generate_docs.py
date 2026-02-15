@@ -5,7 +5,7 @@ ROOTDIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 def find_markdown_files(directory):
     leaf_dir = directory.split(os.sep)[-1]
     markdown_files = []
-    for file in os.listdir(directory):
+    for file in sorted(os.listdir(directory)):
         if file.endswith('.md') and file != "index.md" and file != "SUMMARY.md" and file != f"{leaf_dir}.md":
             markdown_files.append(file)
     return markdown_files
@@ -41,7 +41,7 @@ def form_nav_trees(nav_name, parent_dir, directory_dict):
     markdown_files = find_markdown_files(parent_dir)
     for markdown_file in markdown_files:
         nav_tree += f"- [{markdown_file.replace('_',' ').replace('.md','')}]({os.path.join(parent_dir, markdown_file)})\n"
-    for key, value in directory_dict.items():
+    for key, value in sorted(directory_dict.items()):
         if key != ".":
             nav_tree += form_nav_trees(key, os.path.join(parent_dir, key), value)
     with open(os.path.join(parent_dir, f"{nav_name}.md"), "w") as navfile:
