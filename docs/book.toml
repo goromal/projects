@@ -2,7 +2,7 @@
 authors = ["Andrew Torgesen"]
 language = "en"
 src = "src"
-title = "Andrew's Notes"
+title = "Andrew's Projects"
 
 [output.html]
 default-theme = "light"
