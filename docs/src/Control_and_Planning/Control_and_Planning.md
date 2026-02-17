@@ -1,4 +1,4 @@
-# Planning and Control
+# Control and Planning
 
 - [Apollo Spacecraft Control](./Apollo_Spacecraft_Control.md)
 - [Board Balancing](./Board_Balancing.md)
