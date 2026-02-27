@@ -40,7 +40,7 @@ The state is integrated numerically using a fourth-order Runge-Kutta scheme at 5
 
 ### Controller Types
 
-All controllers share the same proportional-derivative structure, commanding a torque that penalizes attitude error and angular rate error: \\(x\\)
+All controllers share the same proportional-derivative structure, commanding a torque that penalizes attitude error and angular rate error:
 
 $$\boldsymbol{u} = -k_q \boldsymbol{e}\_q - k_w \boldsymbol{e}\_\omega + \boldsymbol{u}\_\text{ff}$$
 
