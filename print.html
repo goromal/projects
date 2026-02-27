@@ -1,0 +1,1201 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Andrew&#x27;s Projects</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-a3376327.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-f6af6d42.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Andrew&#x27;s Projects</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="andrews-projects"><a class="header" href="#andrews-projects">Andrew’s Projects</a></h1>
+<p>Assorted (mostly) autonomy-related projects that I’ve worked on either during my free time or from when I was in school. <strong>A lot more</strong> software projects can be found on my <a href="https://andrewtorgesen.com/anixpkgs">software page</a>.</p>
+<p><a href="https://andrewtorgesen.com">Return to main site</a></p>
+<ul>
+<li><a href="#control-and-planning">Control and Planning</a>
+<ul>
+<li><a href="#apollo-spacecraft-control">Apollo Spacecraft Control</a></li>
+<li><a href="#board-balancing-technical-project">Board Balancing</a></li>
+<li><a href="#genetic-algorithm-based-uav-path-planner">Genetic Algorithm-Based UAV Path Planner</a></li>
+<li><a href="#dynamic-programming-for-the-minimum-time-control-of-the-inverted-pendulum-and-acrobot">Inverted Pendulum Dynamic Programming</a></li>
+<li><a href="#minimum-snap-trajectory-generator-with-error-state-lqr-control">Minimum-Snap Trajectories with Error-state-LQR Control</a></li>
+<li><a href="#multi-agent-air-hockey">Multi-Agent Air Hockey</a></li>
+<li><a href="#optimal-linear-control-on-the-so2-manifold-using-lie-algebras-and-auto-differentiation">Optimal Control on SO(2) Tutorial</a></li>
+<li><a href="#proportional-navigation-applied-to-ground-target-tracking">Proportional Navigation on a UAV</a></li>
+</ul>
+</li>
+<li><a href="#perception-and-estimation">Perception and Estimation</a>
+<ul>
+<li><a href="#6-dof-camera-extrinsics-calibration">Camera Extrinsics Calibration</a></li>
+<li><a href="#ceres-solver-tutorial">Ceres Solver Tutorial</a></li>
+<li><a href="#multi-agent-slam-for-radiological-search">Multi-agent SLAM for Radiological Search</a></li>
+<li><a href="#real-time-semantic-segmentation">Real-Time Semantic Segmentation</a></li>
+<li><a href="#7-dof-robot-arm-particle-filter">Robot Arm Particle Filter</a></li>
+<li><a href="#ship-airwake-measurement-system">Ship Airwake Measurement System</a></li>
+</ul>
+</li>
+<li><a href="#random">Random</a>
+<ul>
+<li><a href="#budget-visualizer">Budget Visualizer</a></li>
+<li><a href="#3d-iphone-path-viewer">Hike Path Viewer</a></li>
+</ul>
+</li>
+<li><a href="#systems">Systems</a>
+<ul>
+<li><a href="#fixed-wing-micro-air-vehicle-simulation">Fixed-Wing MAV Sim</a></li>
+<li><a href="#ros-ground-station">ROS Ground Station</a></li>
+<li><a href="#auvsi-suas-unmanned-aircraft-competition">Unmanned Aircraft Competition</a></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="control-and-planning"><a class="header" href="#control-and-planning">Control and Planning</a></h1>
+<ul>
+<li><a href="#apollo-spacecraft-control">Apollo Spacecraft Control</a></li>
+<li><a href="#board-balancing-technical-project">Board Balancing</a></li>
+<li><a href="#genetic-algorithm-based-uav-path-planner">Genetic Algorithm-Based UAV Path Planner</a></li>
+<li><a href="#dynamic-programming-for-the-minimum-time-control-of-the-inverted-pendulum-and-acrobot">Inverted Pendulum Dynamic Programming</a></li>
+<li><a href="#minimum-snap-trajectory-generator-with-error-state-lqr-control">Minimum-Snap Trajectories with Error-state-LQR Control</a></li>
+<li><a href="#multi-agent-air-hockey">Multi-Agent Air Hockey</a></li>
+<li><a href="#optimal-linear-control-on-the-so2-manifold-using-lie-algebras-and-auto-differentiation">Optimal Control on SO(2) Tutorial</a></li>
+<li><a href="#proportional-navigation-applied-to-ground-target-tracking">Proportional Navigation on a UAV</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="apollo-spacecraft-control"><a class="header" href="#apollo-spacecraft-control">Apollo Spacecraft Control</a></h1>
+<p>An investigation into different forms of attitude control.</p>
+<p>All source code used can be found <a href="https://github.com/goromal/apollo-att-ctrl/tree/main">here</a>.</p>
+<p><img src="img/apollo.gif" title="Apollo spacecraft" alt=""></p>
+<h2 id="motivation"><a class="header" href="#motivation">Motivation</a></h2>
+<p>A few years after taking an advanced dynamics course during undergrad, I decided to re-visit the Euler-based dynamics and controls implementations that I had done for that class’s final project. After having gained additional experience creating controllers for inner attitude loops on drones, I primarily wanted to show how much more “concise” the controller for this project could be. However, the second and more important purpose for re-visiting this controller was to clearly illustrate the pitfalls of Euler-based attitude control which I’ve found to be so commonplace in UAV autopilots. Unlike a quadrotor, which may spend most of its flight time close to a hover attitude-wise, a spacecraft will have to exercise control at just about any arbitrary attitude.</p>
+<h2 id="spacecraft-model"><a class="header" href="#spacecraft-model">Spacecraft Model</a></h2>
+<p>The spacecraft modeled here is the Apollo Command/Service Module, represented as a rigid body rotating freely in three dimensions. Its attitude is parameterized by a unit quaternion \(\boldsymbol{q} \in SO(3)\), and its angular velocity \(\boldsymbol{\omega} \in \mathbb{R}^3\) is expressed in the body frame. The rotational equations of motion are Euler’s equations:</p>
+<p>$$\boldsymbol{J}\dot{\boldsymbol{\omega}} = -\boldsymbol{\omega} \times \boldsymbol{J}\boldsymbol{\omega} + \boldsymbol{u}$$</p>
+<p>where \(\boldsymbol{J}\) is the spacecraft’s inertia tensor and \(\boldsymbol{u}\) is the applied torque. The kinematic equation relating quaternion rate to body angular velocity is:</p>
+<p>$$\dot{\boldsymbol{q}} = \boldsymbol{\omega}$$</p>
+<p>(using the \(SO(3)\) convention where the quaternion is updated via the exponential map of the angular velocity in the tangent space).</p>
+<p>The inertia parameters for the Apollo CSM were sourced from reference data and are used in two forms throughout the simulation:</p>
+<ul>
+<li><strong>Full inertia tensor</strong> \(\boldsymbol{J}\) (with off-diagonal cross terms):</li>
+</ul>
+<p>$$\boldsymbol{J} = \begin{bmatrix} 40823.16 &amp; -1537.81 &amp; 3179.30 \\ -1537.81 &amp; 90593.60 &amp; -128.58 \\ 3179.30 &amp; -128.58 &amp; 98742.98 \end{bmatrix} \text{ kg·m}^2$$</p>
+<ul>
+<li><strong>Simplified diagonal inertia</strong> \(\boldsymbol{J}_\text{simp}\) (cross terms dropped):</li>
+</ul>
+<p>$$\boldsymbol{J}_\text{simp} = \text{diag}(40482.07,\ 90358.43,\ 98637.07) \text{ kg·m}^2$$</p>
+<p>The full tensor is used when evaluating controller robustness, while the simplified tensor is used when the controller itself is designed (i.e., model uncertainty is intentionally introduced between the plant and the controller model).</p>
+<p>The state is integrated numerically using a fourth-order Runge-Kutta scheme at 50 Hz over a 20-second window.</p>
+<h2 id="controlling-the-spacecraft"><a class="header" href="#controlling-the-spacecraft">Controlling the Spacecraft</a></h2>
+<h3 id="controller-types"><a class="header" href="#controller-types">Controller Types</a></h3>
+<p>All controllers share the same proportional-derivative structure, commanding a torque that penalizes attitude error and angular rate error:</p>
+<p>$$\boldsymbol{u} = -k_q \boldsymbol{e}_q - k_w \boldsymbol{e}_\omega + \boldsymbol{u}_\text{ff}$$</p>
+<p>where \( \boldsymbol{e}_q \) is the attitude error, \( \boldsymbol{e}_\omega = \boldsymbol{\omega} - \boldsymbol{R}^\top \boldsymbol{R}_d \boldsymbol{\omega}_d \) is the angular rate error expressed in the body frame, and \(\boldsymbol{u}_\text{ff}\) is an optional feedback linearization feedforward term.</p>
+<p>The controllers differ along three independent axes:</p>
+<p><strong>1. Attitude error formulation</strong> — This is the central comparison of this investigation:</p>
+<ul>
+<li>
+<p><strong>Euler error</strong>: The error is computed by subtracting component-wise Euler angles: \(\boldsymbol{e}_q = [\phi - \phi_d,\ \theta - \theta_d,\ \psi - \psi_d]^\top\). This is intuitive but relies on a coordinate chart that breaks down near singularities (gimbal lock occurs at \(\theta = \pm 90°\)) and produces geometrically incorrect error vectors at large attitude deviations.</p>
+</li>
+<li>
+<p><strong>Tangent space (manifold) error</strong>: The error is computed as the logarithmic map of the relative rotation between the current and desired attitudes on \(SO(3)\): \(\boldsymbol{e}_q = \boldsymbol{q} \ominus \boldsymbol{q}_d = \text{Log}(\boldsymbol{q}_d^{-1} \otimes \boldsymbol{q})\). This always produces a geometrically meaningful, singularity-free error vector in \(\mathbb{R}^3\).</p>
+</li>
+</ul>
+<p><strong>2. Feedback linearization</strong> — When enabled, additional terms are added to cancel the nonlinear gyroscopic coupling \(\boldsymbol{\omega} \times \boldsymbol{J}\boldsymbol{\omega}\) from the dynamics and to account for non-zero desired angular rate and acceleration, yielding a more linear closed-loop response:</p>
+<p>$$\boldsymbol{u}_\text{ff} = \boldsymbol{\omega} \times \boldsymbol{J}\boldsymbol{\omega} - \boldsymbol{J}\left(\hat{\boldsymbol{\omega}}, \boldsymbol{R}^\top \boldsymbol{R}_d \boldsymbol{\omega}_d\right) + \boldsymbol{J}, \boldsymbol{R}^\top \boldsymbol{R}_d \dot{\boldsymbol{\omega}}_d$$</p>
+<p><strong>3. Inertia model</strong> — The controller can be designed using either the full inertia tensor or the simplified diagonal one. Using the simplified model while simulating against the full tensor tests controller robustness to model mismatch.</p>
+<p>The results below focus on the nonlinear (feedback-linearized) controller with the simplified inertia model, commanded to track a step attitude input with full feedforward (desired rate and acceleration included). This setting exercises the controller aggressively and makes the differences between error formulations most apparent.</p>
+<h3 id="results"><a class="header" href="#results">Results</a></h3>
+<h4 id="controller-with-euler-error"><a class="header" href="#controller-with-euler-error">Controller with Euler Error</a></h4>
+<p>Error formulation:</p>
+<p>$$\boldsymbol{u}=-k_q\left(\begin{bmatrix}\phi-\phi_d &amp;&amp; \theta-\theta_d &amp;&amp; \psi-\psi_d\end{bmatrix}^{\top}\right)+\dots$$</p>
+<p>The plots below show six different step-command tracking trials for the Euler-error controller. Each trial commands a different target attitude (a step from the identity), varying in the size and axis of the rotation. The solid lines show the actual Euler angles of the spacecraft, and the dashed lines show the commanded Euler angles.</p>
+<p><img src="img/euler_nonlin_simple-controller-with-full-command1-svg-to-png.png" alt=""></p>
+<p><img src="img/euler_nonlin_simple-controller-with-full-command2-svg-to-png.png" alt=""></p>
+<p><img src="img/euler_nonlin_simple-controller-with-full-command3-svg-to-png.png" alt=""></p>
+<p><img src="img/euler_nonlin_simple-controller-with-full-command4-svg-to-png.png" alt=""></p>
+<p><img src="img/euler_nonlin_simple-controller-with-full-command5-svg-to-png.png" alt=""></p>
+<p><img src="img/euler_nonlin_simple-controller-with-full-command6-svg-to-png.png" alt=""></p>
+<p>For small commanded rotations (trials 1–2), the Euler-error controller performs reasonably well — the spacecraft converges to the target attitude, though with some cross-axis coupling visible as transient excursions in the non-commanded channels. This coupling arises because the Euler angle error vector is not aligned with the actual rotation axis in body space, so the control effort incorrectly distributes torque across axes.</p>
+<p>For larger commanded rotations (trials 3–6), the behavior degrades more noticeably. The cross-axis coupling worsens, and in the most extreme cases the controller may exhibit oscillatory or sluggish transients as the Euler singularity region is approached. The error signal becomes geometrically misleading — commanding large torques along incorrect body axes — and the feedback linearization cannot fully compensate because the underlying error representation itself is wrong.</p>
+<h4 id="controller-with-tangent-space-error"><a class="header" href="#controller-with-tangent-space-error">Controller with Tangent Space Error</a></h4>
+<p>Error formulation:</p>
+<p>$$\boldsymbol{u}=-k_q(\boldsymbol{q}\ominus\boldsymbol{q}_d)+\dots$$</p>
+<p>The same six step-command trials are repeated here with the manifold-error controller. All other settings (gains, feedback linearization, inertia model) are identical, so any difference in behavior is attributable entirely to the error formulation.</p>
+<p><img src="img/manif_nonlin_simple-controller-with-full-command1-svg-to-png.png" alt=""></p>
+<p><img src="img/manif_nonlin_simple-controller-with-full-command2-svg-to-png.png" alt=""></p>
+<p><img src="img/manif_nonlin_simple-controller-with-full-command3-svg-to-png.png" alt=""></p>
+<p><img src="img/manif_nonlin_simple-controller-with-full-command4-svg-to-png.png" alt=""></p>
+<p><img src="img/manif_nonlin_simple-controller-with-full-command5-svg-to-png.png" alt=""></p>
+<p><img src="img/manif_nonlin_simple-controller-with-full-command6-svg-to-png.png" alt=""></p>
+<p>The manifold-error controller shows cleaner convergence across all six trials. Because the error \(\boldsymbol{q} \ominus \boldsymbol{q}_d\) is computed via the logarithmic map on \(SO(3)\), it always points along the true geodesic rotation axis — the shortest path from the current attitude to the desired one. This means the control torque is correctly directed in body space regardless of the magnitude or axis of the commanded rotation.</p>
+<p>For small rotations, the two controllers produce similar results (consistent with the fact that Euler angles and the tangent space are locally equivalent near the identity). For larger rotations, the manifold controller maintains well-behaved, decoupled tracking: each axis converges independently with minimal excitation of the other channels. There are no singularities to encounter, and no degradation as the commanded attitude grows larger.</p>
+<h2 id="conclusions"><a class="header" href="#conclusions">Conclusions</a></h2>
+<p>Euler-angle attitude controllers are pervasive in UAV autopilots — and for good reason. Near hover, a quadrotor rarely strays far from the identity attitude, so the Euler singularity is never approached and the coordinate-chart error works well enough. The cost of that simplicity is low.</p>
+<p>For a spacecraft, however, arbitrary large-angle maneuvers are routine. In that regime, the Euler error formulation’s geometric incorrectness becomes a real liability: cross-axis coupling degrades tracking performance, and any trajectory that approaches the \(\theta = \pm 90°\) singularity can cause the controller to behave erratically or fail entirely.</p>
+<p>The tangent space error formulation resolves both problems with remarkably little additional complexity. Computing \(\boldsymbol{q} \ominus \boldsymbol{q}_d\) via the \(SO(3)\) logarithmic map requires only a handful of extra lines of code, yet it yields an error signal that is geometrically valid everywhere on the rotation group — no singularities, no cross-axis distortion, and consistent convergence behavior regardless of the size of the commanded maneuver.</p>
+<p>The practical takeaway: the choice of attitude error representation is not merely a mathematical nicety. It is a design decision with real consequences for controller performance, and the manifold-based approach should be the default for any system that exercises significant rotational authority.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="board-balancing-technical-project"><a class="header" href="#board-balancing-technical-project">Board Balancing Technical Project</a></h1>
+<p>A personal attempt to apply linear control theory to a real-world system.</p>
+<h2 id="motivation-1"><a class="header" href="#motivation-1">Motivation</a></h2>
+<p>I carried out this project in a cabin during Thanksgiving break with my family. I was in the middle of my first official Controls course, and I guess my excitement for the subject prompted me to dedicate some time to mathematical derivations and programming instead of the mountains and the hot tub…</p>
+<h2 id="model-description"><a class="header" href="#model-description">Model Description</a></h2>
+<p>Basically, the challenge is to have a person balance on top of a board, which in turn is balancing on top of a cylinder (like a two liter bottle or something). I made this physical setup with an old skateboard for fun and to improve my balance in dynamic situations.</p>
+<p><strong>Schematic:</strong></p>
+<p><img src="img/BBDiagram.svg" title="Board Balancing Abstraction" alt=""></p>
+<p><strong>Assumptions:</strong></p>
+<ul>
+<li>There is no slip between the ground, the cylinder, and the board.</li>
+<li>The finite weight of the person balancing on the board can be shifted between the two feet with negligible rotational inertia effects from the shifting.</li>
+<li>Motion confined to the plane.</li>
+<li>All objects in the system act as rigid bodies.</li>
+</ul>
+<p><strong>Equations of Motion and Controller Derivation:</strong></p>
+<p>I used the Euler-Lagrange method to model the dynamics of the board balancing system, and decided to try using a state space feedback controller with an integrator to control the system to commanded cylinder rotation angles.</p>
+<p>All of my work and the final dynamics/controller equations can be found in <a href="https://andrewtorgesen.github.io/res/Board%20Balancing.pdf">the notes I made over Thanksgiving break</a>. I thought it would be fun to include my hand-written notes to demonstrate both my meandering efforts and the way I like to take notes on all kinds of subjects. There are a lot of colors and pasted images involved, as I prefer to gather information from all around the internet to fill in emergent gaps in my understanding as I go.</p>
+<h2 id="matlab-implementation"><a class="header" href="#matlab-implementation">Matlab Implementation</a></h2>
+<p><img src="img/bb_program.svg" title="Block diagram for the board balancing simulation" alt=""></p>
+<p>To test out my derived dynamics and controller, I created a simulation in Matlab that models the dynamics of the board balance system and controls it to commanded cylinder angle values. The following sections give code listings for all of the blocks in the above block diagram.</p>
+<h3 id="parameters"><a class="header" href="#parameters">Parameters</a></h3>
+<p>This code defines all physical parameters for the system, the linearized state space model, the controller parameters, and the signal and animation parameters.</p>
+<pre><code class="language-matlab">% Physical Parameters
+P.mp = 2;   % mass of plank (kg)
+P.mb = 3;   % mass of bottle (kg)
+P.g = 9.81; % gravity (m/s^2)
+P.dL = 0.25;  % distance from left foot to plank center (m)
+P.dR = P.dL;  % distance from right foot to plank center (m)
+P.wp = 0.8; % width of plank (m)
+P.hp = 0.03;% thickness of board (m)
+P.Rb = 0.05; % radius of bottle (m)
+P.Ft = 800; % my weight (N)
+
+P.Jb = 1/2*P.mb*P.Rb^2;
+P.Jp = 1/12*P.mp*(P.wp^2 + P.hp^2);
+
+% Linearized State-Space Model
+P.A = [0 1 0 0;P.Ft*P.Rb/P.Jp 0 P.Ft*P.Rb/P.Jp 0;...
+       0 0 0 1;(P.Ft+P.g*P.mp)*P.Rb/P.Jb 0 0 0];
+P.B = [0; -(P.dL+P.dR)/P.Jp; 0; 0];
+P.C = [0 0 1 0];
+n = rank(P.A);
+
+% Full state feedback gains
+wnthetab = 40;
+wnphi = 10*wnthetab;
+zeta = 1/sqrt(2);
+desiredPoly = conv([1 2*zeta*wnthetab wnthetab^2],[1 2*zeta*wnphi wnphi^2]);
+Ahat = [P.A zeros(n, 1);-P.C 0];
+Bhat = [P.B; 0];
+K = place(Ahat, Bhat, [roots(desiredPoly); -5]);
+P.K = K(1:n);
+P.Ki = K(end);
+
+% Saturation limits
+buffer = P.Ft;%/2; % the maximum you can go
+P.umax = P.Ft/2 + buffer;
+P.umin = P.Ft/2 - buffer;
+
+% Animation Parameters
+P.footW = .1;   % width of foot (m)
+P.footH = .02;  % height of shoe sole (m)
+P.floorL = 2;   % length of sim floor (m)
+P.ceilH = 0.4;  % height of sim ceiling (m)
+
+% Simulation Parameters
+P.phi0 = 0.0;
+P.phidot0 = 0.0;
+P.thetab0 = 0.0;
+P.thetabdot0 = 0.0;
+
+P.t0 = 0.0;
+P.tf = 10.0;
+P.Ts = 0.0001;
+P.t_plot = 100*P.Ts; %0.0001;
+
+P.r_amp = 20*pi/180;
+P.r_freq = 1;
+</code></pre>
+<h3 id="signal-generator"><a class="header" href="#signal-generator">Signal Generator</a></h3>
+<p>This code defines functions for generating a signal for the commanded cylinder angle, \(\theta_C\). It defines methods for a square wave, a sawtooth wave, a sine wave, and a random signal.</p>
+<pre><code class="language-matlab">classdef signalGenerator
+    % produces waves: square, sawtooth, random, sin
+    properties
+        amplitude
+        frequency
+        y_offset
+    end
+    methods
+        % constructor ===================================================
+        function self = signalGenerator(amplitude, frequency, y_offset)
+            self.amplitude = amplitude;
+            if nargin &gt; 1
+                self.frequency = frequency;
+            else
+                self.frequency = 1;
+            end
+            if nargin &gt; 2
+                self.y_offset = y_offset;
+            else
+                self.y_offset = 0;
+            end
+        end
+        % signal outputs ================================================
+        function out = square(self, t)
+            % if in first half of period, output positive, else negative
+            if mod(t, 1/self.frequency) &lt;= 0.5/self.frequency
+                out = self.amplitude + self.y_offset;
+            else
+                out = -self.amplitude + self.y_offset;
+            end
+        end
+        function out = sawtooth(self, t)
+            out = 4*self.amplitude*self.frequency * mod(t, 0.5/self.frequency)...
+                - self.amplitude + self.y_offset;
+        end
+        function out = random(self, t)
+            out = sqrt(self.amplitude)*randn + self.y_offset;
+        end
+        function out = sin(self, t)
+            out = self.amplitude*sin(2*pi*self.frequency*t) + self.y_offset;
+        end
+    end
+end
+</code></pre>
+<h3 id="data-plotter"><a class="header" href="#data-plotter">Data Plotter</a></h3>
+<p>This code creates plots that update in real time with important information about the performance of the system.</p>
+<pre><code class="language-matlab">classdef plotData &lt; handle
+    properties
+        % data histories
+        time_history
+        thetab_history
+        thetab_r_history
+        F_history
+        index
+        % figure handles
+        thetab_r_handle
+        thetab_handle
+        F_handle
+    end
+    methods
+        %--constructor--------------------------
+        function self = plotData(P)
+            % Instantiate lists to hold the time and data histories
+            n = ceil((P.tf-P.t0)/P.t_plot);
+            self.time_history = NaN*ones(1,n);
+            self.thetab_history = NaN*ones(1,n);
+            self.thetab_r_history = NaN*ones(1,n);
+            self.F_history = NaN*ones(1,n);
+            self.index = 1;
+
+            % Create figure and axes handles
+            figure(2), clf
+            subplot(2, 1, 1)
+                hold on
+                self.thetab_r_handle = plot(self.time_history, self.thetab_r_history, 'r');
+                self.thetab_handle = plot(self.time_history, self.thetab_history, 'k');
+                ylabel('theta (degrees)')
+                title('Output Comparison')
+            subplot(2, 1, 2)
+                hold on
+                self.F_handle = plot(self.time_history, self.F_history, 'k');
+                ylabel('F (N)')
+                xlabel('t (s)')
+                title('Right Foot Force')
+        end
+        %----------------------------
+        function self = updatePlots(self, t, thetab_r, thetab, F)
+            % update the time history of all plot variables
+            self.time_history(self.index) = t;
+            self.thetab_r_history(self.index) = thetab_r;
+            self.thetab_history(self.index) = thetab;
+            self.F_history(self.index) = F;
+            self.index = self.index + 1;
+
+            % update the plots with associated histories
+            set(self.thetab_r_handle, 'Xdata', self.time_history, 'Ydata', self.thetab_r_history)
+            set(self.thetab_handle, 'Xdata', self.time_history, 'Ydata', self.thetab_history)
+            set(self.F_handle, 'Xdata', self.time_history, 'Ydata', self.F_history)
+        end
+    end
+end
+</code></pre>
+<h3 id="animation"><a class="header" href="#animation">Animation</a></h3>
+<p>This code draws the board balancing system, dynamically updating the drawing to create an animation based on the current state in the simulation.</p>
+<pre><code class="language-matlab">classdef animation
+    properties
+        plank_handle
+        left_foot_handle
+        right_foot_handle
+        bottle_handle
+        floorL
+        ceilH
+        footW
+        footH
+        dL
+        dR
+        wp
+        hp
+        Rb
+    end
+    methods
+        % constructor ===================================================
+        function self = animation(P)
+            self.floorL = P.floorL;
+            self.ceilH = P.ceilH;
+            self.footW = P.footW;
+            self.footH = P.footH;
+            self.dL = P.dL;
+            self.dR = P.dR;
+            self.wp = P.wp;
+            self.hp = P.hp;
+            self.Rb = P.Rb;
+
+            figure(1), clf
+
+            % draw wall and floor
+            plot([-self.floorL/2, -self.floorL/2, self.floorL/2],[self.ceilH, 0, 0],'k--');
+            hold on
+
+            % initialize mass, spring, and damper
+            self = self.drawPlank(P.phi0, P.thetab0);
+            self = self.drawLeftFoot(P.phi0, P.thetab0);
+            self = self.drawRightFoot(P.phi0, P.thetab0);
+            self = self.drawBottle(P.thetab0);
+
+            % change axis limits
+            axis([-self.floorL/2, self.floorL/2, -0.1, self.ceilH]);
+            pbaspect([self.floorL, self.ceilH+.1, 1]);
+        end
+        % drawing methods ===============================================
+        function self = drawSystem(self, substate)
+            phi = substate(1);
+            thetab = substate(2);
+            self = self.drawPlank(phi, thetab);
+            self = self.drawLeftFoot(phi, thetab);
+            self = self.drawRightFoot(phi, thetab);
+            self = self.drawBottle(thetab);
+            drawnow
+        end
+        function self = drawPlank(self, phi, thetab)
+            % untransformed coordinates, row vector of (x,y) coords
+            X = [-self.wp/2, self.wp/2,  self.wp/2, -self.wp/2, -self.wp/2;...
+                  self.hp/2, self.hp/2, -self.hp/2, -self.hp/2,  self.hp/2];
+            % rotate by phi
+            R = [cos(phi) -sin(phi);sin(phi) cos(phi)];
+            X = R*X;
+            % translate
+            X = X + self.Rb*[-thetab-(sin(phi)+thetab*cos(phi));1+cos(phi)-thetab*sin(phi)]...
+                + [0;self.hp/2];
+            % draw
+            if isempty(self.plank_handle)
+                self.plank_handle = plot(X(1,:), X(2,:), 'k');
+            else
+                set(self.plank_handle, 'XData', X(1,:), 'YData', X(2,:));
+            end
+        end
+        function self = drawLeftFoot(self, phi, thetab)
+            % untransformed coordinates, row vector of (x,y) coords
+            X = [-self.footW/2, self.footW/2,  self.footW/2, -self.footW/2, -self.footW/2;...
+                  self.footH/2, self.footH/2, -self.footH/2, -self.footH/2,  self.footH/2];
+            % translate
+            X = X + self.Rb*[-thetab-(sin(phi)+thetab*cos(phi));1+cos(phi)-thetab*sin(phi)]...
+                + [-self.dL;self.hp + self.footH/2];
+
+            % rotate by phi
+            R = [cos(phi) -sin(phi);sin(phi) cos(phi)];
+            X = R*X;
+
+            % draw
+            if isempty(self.left_foot_handle)
+                self.left_foot_handle = plot(X(1,:), X(2,:), 'r');
+            else
+                set(self.left_foot_handle, 'XData', X(1,:), 'YData', X(2,:));
+            end
+        end
+        function self = drawRightFoot(self, phi, thetab)
+            % untransformed coordinates, row vector of (x,y) coords
+            X = [-self.footW/2, self.footW/2,  self.footW/2, -self.footW/2, -self.footW/2;...
+                  self.footH/2, self.footH/2, -self.footH/2, -self.footH/2,  self.footH/2];
+            % translate
+            X = X + self.Rb*[-thetab-(sin(phi)+thetab*cos(phi));1+cos(phi)-thetab*sin(phi)]...
+                + [self.dR;self.hp + self.footH/2];
+
+            % rotate by phi
+            R = [cos(phi) -sin(phi);sin(phi) cos(phi)];
+            X = R*X;
+            % draw
+            if isempty(self.right_foot_handle)
+                self.right_foot_handle = plot(X(1,:), X(2,:), 'r');
+            else
+                set(self.right_foot_handle, 'XData', X(1,:), 'YData', X(2,:));
+            end
+        end
+        function self = drawBottle(self, thetab)
+            th = 0:pi/50:2*pi;
+            X = self.Rb*cos(th) - self.Rb*thetab;
+            Y = self.Rb*sin(th) + self.Rb;
+
+            if isempty(self.bottle_handle)
+                self.bottle_handle = plot(X, Y, 'b');
+            else
+                set(self.bottle_handle, 'XData', X, 'YData', Y);
+            end
+        end
+    end
+end
+</code></pre>
+<h3 id="dynamics"><a class="header" href="#dynamics">Dynamics</a></h3>
+<p>This code defines the nonlinear, coupled differential equations which describe the evolution of the board balancing system given an input, which is the distribution of shifted weight of the human “pilot” between the two feet.</p>
+<pre><code class="language-matlab">classdef dynamics &lt; handle
+    %  Model the physical system
+    %----------------------------
+    properties
+        state
+        mp
+        mb
+        g
+        dL
+        dR
+        Rb
+        Ft
+        Jb
+        Jp
+        Cmat
+        Ts
+    end
+    %----------------------------
+    methods
+        %---constructor-------------------------
+        function self = dynamics(P)
+            % Initial state conditions
+            self.state = [...
+                        P.phi0;...                
+                        P.phidot0;...
+                        P.thetab0;...
+                        P.thetabdot0
+                        ];     
+            self.mp = P.mp;
+            self.mb = P.mb;
+            self.g = P.g;
+            self.dL = P.dL;
+            self.dR = P.dR;
+            self.Rb = P.Rb;
+            self.Ft = P.Ft;
+            self.Jb = P.Jb;
+            self.Jp = P.Jp;
+            self.Cmat = P.C;
+            self.Ts = P.Ts;
+        end
+        %----------------------------
+        function self = propagateDynamics(self, u)
+            % Integrate ODE using Runge-Kutta RK4 algorithm
+            k1 = self.derivatives(self.state, u);
+            k2 = self.derivatives(self.state + self.Ts/2*k1, u);
+            k3 = self.derivatives(self.state + self.Ts/2*k2, u);
+            k4 = self.derivatives(self.state + self.Ts*k3, u);
+            self.state = self.state + self.Ts/6 * (k1 + 2*k2 + 2*k3 + k4);
+        end
+        %----------------------------
+        function xdot = derivatives(self, state, u)
+            Fr = u;
+            phi = state(1);
+            phidot = state(2);
+            thetab = state(3);
+            thetabdot = state(4);
+            phiddot = (self.Ft-Fr)/self.Jp*(self.dL + self.Rb*(sin(phi)+thetab*cos(phi)))...
+                - Fr/self.Jp*(self.dR - self.Rb*(sin(phi)+thetab*cos(phi)));
+            thetabddot = self.Rb/self.Jb*(self.Ft + self.mp*self.g)*sin(phi);
+            xdot = [phidot; phiddot; thetabdot; thetabddot];
+        end
+        %----------------------------
+        function y = getOutput(self)
+            y = self.Cmat * self.state;
+        end
+        %----------------------------
+        function xs = getSubState(self)
+            phi = self.state(1);
+            thetab = self.state(3);
+            xs = [phi; thetab];
+        end
+        %----------------------------
+        function x = getState(self)
+            x = self.state;
+        end
+    end
+end
+</code></pre>
+<h3 id="controller"><a class="header" href="#controller">Controller</a></h3>
+<p>This code implements a full-state feedback controller with an integrator:</p>
+<p>$$ F = F_e - Kx - k_i\zeta_e $$</p>
+<p>as well as input saturation and integrator anti-windup. The integrator term allows for the full-state feedback system to act as a controller instead of just a regulator, accepting non-zero values for \(\theta_C\).</p>
+<pre><code class="language-matlab">classdef controller &lt; handle
+    %  Implements full-state feedback control without an integrator or
+    %  saturation
+    %----------------------------
+    properties
+        param
+        zeta_e
+        error_km1
+    end
+    %----------------------------
+    methods
+        %----------------------------
+        function self = controller(P)
+            self.param = P;
+            self.zeta_e = 0;
+            self.error_km1 = 0;
+        end
+        %----------------------------
+        function F = u(self, y_r, x)
+            % Calculate equilibrium force due to linearization
+            Fe = self.param.Ft*(self.param.dL + self.param.Rb*x(3))/(self.param.dR+self.param.dL);
+            % Integrate the error to update zeta_e
+            self.integrateError(y_r - self.param.C*x);
+            % Calculate the unsaturated force using state
+            F_unsat = Fe - self.param.K*x - self.param.Ki*self.zeta_e;
+            % Saturate input
+            F = self.sat(F_unsat);
+            % Implement anti-windup
+            if self.param.Ki ~= 0
+                self.zeta_e = self.zeta_e + 1/self.param.Ki*(F - F_unsat);
+            end
+        end
+        %----------------------------
+        function F_sat = sat(self, u)
+            F_sat = u;
+            if u &gt; self.param.umax
+                F_sat = self.param.umax;
+            elseif u &lt; self.param.umin
+                F_sat = self.param.umin;
+            end
+        end
+        %----------------------------
+        function self = integrateError(self, error)
+            self.zeta_e = self.zeta_e + self.param.Ts/2*...
+                (error + self.error_km1);
+            self.error_km1 = error;
+        end
+    end
+end
+</code></pre>
+<h3 id="simulator"><a class="header" href="#simulator">Simulator</a></h3>
+<p>This code puts everything together in a simulation loop.</p>
+<pre><code class="language-matlab">param;
+
+SYS = dynamics(P);
+CNTRL = controller(P);
+ANMTN = animation(P);
+
+thetabRef1 = signalGenerator(pi, 0.5);
+thetabRef2 = signalGenerator(pi/4, 0.25);
+
+dataPlot = plotData(P);
+
+% main simulation loop
+t = P.t0;
+while t &lt; P.tf  
+    r = thetabRef1.square(t) + thetabRef2.square(t);
+    t_next_plot = t + P.t_plot;
+    while t &lt; t_next_plot
+        u = CNTRL.u(r, SYS.getState());
+        SYS.propagateDynamics(u);
+        t = t + P.Ts;
+    end
+    dataPlot.updatePlots(t, r, SYS.getOutput(), u);
+    ANMTN.drawSystem(SYS.getSubState());
+    pause(P.t_plot)
+end
+</code></pre>
+<h2 id="simulation-results"><a class="header" href="#simulation-results">Simulation Results</a></h2>
+<p>The animation and plots below demonstrate the ability of the feedback controller to track step commands without overshoot and with a rise time of \(\approx 0.5\) seconds.</p>
+<p><img src="img/bbSim.gif" title="Board balancing full-state feedback performance" alt=""></p>
+<p>Surely, there is a lot more that could have been done with this setup, from model validation to implementing disturbances and more advanced control techniques–perhaps even nonlinear control. That being said, this was primarily a fun exercise and an opportunity to apply the principles of my first controls course from the ground-up.</p>
+<p>This project is a good example of the type of work that I most enjoy, which entails full-fledged analysis of a system and writing algorithms to leverage that understanding to make things happen. Math, engineering, and programming knowledge are all required in such projects, which is probably why I find them to be so stimulating.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="genetic-algorithm-based-uav-path-planner"><a class="header" href="#genetic-algorithm-based-uav-path-planner">Genetic Algorithm-Based UAV Path Planner</a></h1>
+<p>An application of biologically-inspired optimization algorithms.</p>
+<p><img src="img/ga_cover.jpeg" title="Genetic algorithm planner" alt=""></p>
+<hr>
+<p><a href="https://andrewtorgesen.com/res/GA%20UAV%20Path%20Planner.pdf">Check out the paper!</a></p>
+<hr>
+<p><strong>Abstract:</strong> Path planning and obstacle avoidance given a set of waypoints is an important and common problem for autonomous, unmanned air vehicles. There is a large field of research dedicated to solving the problem of efficiently navigating an obstacle field to arrive at a specified location, with wide-ranging algorithmic solutions. This project aims to solve the problem for a small, fixed-wing unmanned air vehicle by formulating the problem as an a-priori optimal control problem and optimizing over possible trajectories using a Genetic Algorithm. The Genetic Algorithm is found to perform well when the closed-loop dynamics of the unmanned air vehicle are approximated by second-order differential equations and the trajectory optimization is formulated as a single-shooting (as opposed to a direct collocation) problem.</p>
+<p><img src="img/GAPP1.gif" alt=""> <img src="img/GAPP2.gif" alt=""></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="dynamic-programming-for-the-minimum-time-control-of-the-inverted-pendulum-and-acrobot"><a class="header" href="#dynamic-programming-for-the-minimum-time-control-of-the-inverted-pendulum-and-acrobot">Dynamic Programming for the Minimum-Time Control of the Inverted Pendulum and Acrobot</a></h1>
+<p>Class project for the graduate-level Optimal Control and Estimation course at MIT.</p>
+<p><img src="img/ip_policy.png" title="SLAM coverage algorithm" alt=""></p>
+<hr>
+<p><a href="https://andrewtorgesen.com/res/16.32%20Final%20Project%20Report.pdf">Project Paper</a></p>
+<hr>
+<p>Feedback control of highly nonlinear and chaotic systems is rarely, if ever, a straightforward undertaking. For such systems, linear optimal feedback control laws fail to provide stability unless, perhaps, they are continually re-calculated by iteratively linearizing the nonlinear system about a pre-computed open-loop trajectory from a nonlinear solver. Alternative methods of nonlinear control are often tailored to specific systems by exploiting some idiosyncrasy in their dynamics, as is the case with swing-up controllers.</p>
+<p>Unlike nonlinear control methods based on open-loop trajectory optimization or ad hoc designs, dynamic programming offers an alternative closed-loop control option that can be applied to a wide class of highly nonlinear systems. In dynamic programming, heuristic search is used to derive a control policy for the entirety of the state space of the system. The general applicability of dynamic programming methods comes at the cost of high demands on memory usage and computational power in the derivation of the controller, though subsequent application of the derived control strategy requires significantly less resources.</p>
+<p>For this project, I applied dynamic programming (in the form of value iteration of the Bellman update equation) to the minimum-time height task for the acrobot, which is a highly nonlinear and chaotic system. The height task entails controlling the acrobot to reach a specified height with a near-zero velocity. Moreover, the minimum-time specification entails restricting the available inputs to some pre-defined saturation values: \(u \in {−\tau_\text{max}, 0, \tau_\text{max}}\) to complete the height task as quickly as possible. This report details the efforts made to model the problem and the dynamic programming equations, implement them in C++, and apply the derived control strategy in simulation to achieve desired behavior with the acrobot as well as the (simpler) nonlinear inverted pendulum.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="minimum-snap-trajectory-generator-with-error-state-lqr-control"><a class="header" href="#minimum-snap-trajectory-generator-with-error-state-lqr-control">Minimum-Snap Trajectory Generator with Error-State LQR Control</a></h1>
+<p>Applying advanced robotics principles to quadrotor flight.</p>
+<p><img src="img/TGELQR.svg" title="TGELQR" alt=""></p>
+<hr>
+<p><a href="https://andrewtorgesen.com/res/16.31%20Project%20Poster%20-%20Andrew%20Torgesen.pdf">Project Poster</a></p>
+<p><a href="https://andrewtorgesen.com/res/16.31%20Final%20Project%20Presentation.pdf">Project Presentation</a></p>
+<p><a href="https://andrewtorgesen.com/res/16.31%20Final%20Project%20PAPER.pdf">Project Paper</a></p>
+<hr>
+<p><strong>Abstract:</strong> In an attempt to increase the agility of the Parrot Mambo quadrotor platform in tracking smooth, continuously varying position trajectories, the Simulink flight control system is augmented with a full-state trajectory generator, error-state LQR controller, and an updated attitude controller. The trajectory generator, which takes advantage of the differential flatness of multirotor dynamics, is able to generate a full-state trajectory from position, velocity, acceleration, and jerk commands. The error-state LQR and attitude controllers allow the quadrotor to follow the generated reference trajectory with greater accuracy than the default Simulink flight control system for the <a href="https://www.parrot.com/us/drones/parrot-mambo-fpv">Parrot Mambo</a>. Explanations and derivations for the Lie derivatives used for the error-state LQR are given. Simulation and hardware results are used to validate the performance of the augmented flight control system.</p>
+<p><img src="img/control_architecture.svg" alt=""></p>
+<p><img src="img/tgelqr_hw.jpg" alt=""></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="multi-agent-air-hockey"><a class="header" href="#multi-agent-air-hockey">Multi-Agent Air Hockey</a></h1>
+<p>Class project for the graduate-level underactuated robotics course at MIT.</p>
+<p><img src="img/air_hockey.png" title="Air hockey" alt=""></p>
+<hr>
+<p><a href="https://andrewtorgesen.com/res/UR_Final_Project_Report.pdf">Project Paper</a></p>
+<hr>
+<p><strong>Abstract:</strong> A simulation environment implementing stochastic dynamics and event-based collision detection is created to provide a sandbox for comparing and showcasing the effectiveness of several trajectory optimization techniques in facilitating team performance in an adversarial game of multi-agent air hockey. Among the techniques being compared or showcased are a family of open-loop trajectory optimizations featuring linear, nonlinear, and hybrid solvers. In addition to the open-loop strategies, both decentralized and centralized model predictive control (MPC) formulations are presented and tested in the air hockey environment. The effect of utilizing control barrier functions (CBFs) for centralized collision avoidance is also explored. In comparing the performance of the various control schemes, a regularized strategy is used for each team to avoid confounding the effects of strategy choice and control method. Comparison results suggest that there are inherent tradeoffs between scoring ability and robust obstacle avoidance in dynamic, adversarial environments. Additionally, control barrier functions provide a promising convex method for ensuring obstacle avoidance from a centralized planner.</p>
+<hr>
+<p>I worked on this project with two friends in my lab who also do research in robotics and unmanned aircraft. We wanted to compare the performance of a slew of trajectory optimization algorithms in an entertaining-to-evaluate environment with discontinuous dynamics–a game of simulated air hockey seemed like the perfect choice!</p>
+<p>Here are some sample videos:</p>
+<p><em>60-second game between a decentralized model predictive control (DMPC) strategy (red team) and a centralized model predictive control (CMPC) strategy (blue team)</em>:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VKunnc5JWt0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p><em>Trajectory optimization that encodes contact dynamics to score a goal in as little time as possible while obeying dynamic constraints and avoiding obstacles with a “bounce kick”</em>:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5gcPreTY6mM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>Details can be found in the project paper.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="optimal-linear-control-on-the-so2-manifold-using-lie-algebras-and-auto-differentiation"><a class="header" href="#optimal-linear-control-on-the-so2-manifold-using-lie-algebras-and-auto-differentiation">Optimal Linear Control on the SO(2) Manifold Using Lie Algebras and Auto-Differentiation</a></h1>
+<p>A tutorial / nice into to Lie algebras applied to control theory.</p>
+<p><img src="img/lie_cover.jpeg" title="Lie algebras" alt=""></p>
+<hr>
+<p><a href="https://andrewtorgesen.com/res/Lie%20LQR%20SO2.pdf">Check out the paper!</a> That’s where the good stuff is.</p>
+<hr>
+<p><strong>Abstract:</strong> Many interesting problems in robotics and control entail dealing with extensive usage of rigid body transformations in the formulation of the dynamics of systems and their corresponding controllers. Expressing these transformations adequately can pose a challenge. In particular, rotational transforms cannot be described globally in the language of vector spaces. Thus, control formulations dealing with rotational transforms often have to resort to programmatic “hacks” such as angle wrapping and quaternion normalization to maintain a feasible control strategy. Additionally, deriving the equations of motion of complex systems with rigid body transformations for control often proves to be a cumbersome process. This project briefly reviews the mathematical foundations and applications of Lie Algebras and auto-differentiation to control theory. Lie Algebras are becoming increasingly popular, particularly in applications leveraging computer vision. Auto-differentiation has proved to be a useful and efficient alternative to calculating analytical derivatives for control. These technologies are applied to the formulation and simulation of a linear quadratic regulation (LQR) control strategy on the SO(2) manifold.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="proportional-navigation-applied-to-ground-target-tracking"><a class="header" href="#proportional-navigation-applied-to-ground-target-tracking">Proportional Navigation Applied to Ground Target Tracking</a></h1>
+<p>Application for a multi-rotor simulation sandbox. I coded this up over a couple of evenings on a family vacation one year to test some simulation, controls, and visualization code.</p>
+<p>One random bit of this project that I’m weirdly proud of is that I had written some code to analyze curvy paths that I would draw on my iPad and turn that path into the ground vehicle simulation that you see in the image and videos below.</p>
+<p><a href="https://en.wikipedia.org/wiki/Proportional_navigation">Proportional navigation</a> calculations are used to try to get the UAV to intercept the moving ground vehicle, and <a href="https://www.cs.cmu.edu/~./motionplanning/papers/sbp_papers/integrated1/borenstein_potential_field_limitations.pdf">simple potential fields</a> are used to have the UAV concurrently avoid the cylinders.</p>
+<p><img src="img/ProNavUAV.png" title="Proportional navigation" alt=""></p>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/RxqNI8_ko_M" frameborder="0" allowfullscreen=""></iframe>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/0sF9nGATwAc" frameborder="0" allowfullscreen=""></iframe>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="perception-and-estimation"><a class="header" href="#perception-and-estimation">Perception and Estimation</a></h1>
+<ul>
+<li><a href="#6-dof-camera-extrinsics-calibration">Camera Extrinsics Calibration</a></li>
+<li><a href="#ceres-solver-tutorial">Ceres Solver Tutorial</a></li>
+<li><a href="#multi-agent-slam-for-radiological-search">Multi-agent SLAM for Radiological Search</a></li>
+<li><a href="#real-time-semantic-segmentation">Real-Time Semantic Segmentation</a></li>
+<li><a href="#7-dof-robot-arm-particle-filter">Robot Arm Particle Filter</a></li>
+<li><a href="#ship-airwake-measurement-system">Ship Airwake Measurement System</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="6-dof-camera-extrinsics-calibration"><a class="header" href="#6-dof-camera-extrinsics-calibration">6-DOF Camera Extrinsics Calibration</a></h1>
+<p>Undergraduate research project done outside of coursework.</p>
+<hr>
+<p>\( \ddagger \) <a href="https://github.com/goromal/camera-extrinsics-calibrator">Link to Github Repository</a> \( \ddagger \)</p>
+<hr>
+<h2 id="motivation-and-description"><a class="header" href="#motivation-and-description">Motivation and Description</a></h2>
+<p>Many autonomous agents such as unmanned air vehicles (UAV) leverage the fusion of visual and inertial odometry measurements for real-time state estimation and control. In order for visual-inertial odometry to be effective, it is imperative that the rigid body transform between the vision sensor (usually a camera) and the inertial measurement unit (IMU) be known precisely. Currently, ascertaining that transform usually entails a cumbersome calibration process for backing out the translation and rotation between the camera and IMU frame. Given a flight path with both camera measurements of static landmarks of known locations and inertial measurements, however, an optimization routine may be formulated which automates this process, performing an extrinsic camera calibration from measurement data. Visual landmarks with known locations can be obtained with fiducial markers such as the <a href="https://www.uco.es/investiga/grupos/ava/node/26">ArUco tag</a>.</p>
+<p>As an undergraduate research project that I completed during my senior year, I designed and implemented an optimization routine that uses camera and IMU measurements taken during a single flight to estimate the extrinsic parameters of a camera used for visual-inertial odometry. The routine is similar to optimizing over a pose graph, which is famously utilized in simultaneous localization and mapping (SLAM) applications.</p>
+<h2 id="the-math"><a class="header" href="#the-math">The Math</a></h2>
+<h3 id="definitions"><a class="header" href="#definitions">Definitions</a></h3>
+<p>To understand everything the algorithm is doing, a lot of terms need to be defined (sorry)…</p>
+<p>All vector quantities in the camera extrinsics calibration problem are expressed in one of the following frames:</p>
+<p><img src="img/cc_frames.svg" title="Frame and variable definitions" alt=""></p>
+<ul>
+<li><strong>The inertial/global frame (\(\mathcal{I}\)):</strong> This is the north-east-down (NED) frame, assumed to be stationary over the course of the calibration routine.</li>
+<li><strong>The UAV body frame (\(\mathcal{B}\)):</strong> This frame is body-centric and body-fixed to the UAV. The x-axis sticks out the front of the UAV, the y-axis out the right side, and the z-axis out the bottom, towards the ground.</li>
+<li><strong>The camera frame (\(\mathcal{C}\)):</strong> This frame is centered on the pinhole convergence point of the camera attached to the UAV. From the perspective of the camera image, the x-axis sticks out to the right, the y-axis points down, and the z-axis points out of the camera plane toward the world.</li>
+<li><strong>The camera pixel frame (\(\mathcal{C}_\mathcal{P}\)):</strong> This frame coincides with the camera frame in terms of orientation, but is centered on the image plane, where units are measured in pixels.</li>
+</ul>
+<p>Additionally, the following vectors in \(\mathbb{R}^n\) and manifold objects (read my <a href="Planning_and_Control/Optimal_Control_on_SO(2)_Tutorial.html">paper</a> on Lie Algebra math!) in \(\mathbb{S}^3\) (the space of unit-length quaternions, though the following equations will use their rotation matrix counterparts instead, for clarity) are relevant to the calculations in the algorithm:</p>
+<ul>
+<li>\(^\mathcal{B}x_{\mathcal{C},0} \in \mathbb{R}^3\): The <strong>initial guess</strong> for the translational offset between the origin of the UAV body frame and the origin of the camera frame. Expressed in the body frame.</li>
+<li>\(q_{\mathcal{B},0}^\mathcal{C} \in \mathbb{S}^3\): The <strong>initial guess</strong> for the (passive) rotational offset between the UAV body frame and the camera frame.</li>
+<li>\(^\mathcal{B}x_{\mathcal{C},f} \in \mathbb{R}^3\): The <strong>calculated</strong> translational offset between the origin of the UAV body frame and the origin of the camera frame, as a result of the optimization routine. Expressed in the body frame.</li>
+<li>\(q_{\mathcal{B},f}^\mathcal{C} \in \mathbb{S}^3\): The <strong>calculated</strong> (passive) rotational offset between the UAV body frame and the camera frame, as a result of the optimization routine.</li>
+<li>\(^\mathcal{I}x_\mathcal{B} \in \mathbb{R}^3\): The translation vector of the UAV with respect to the initial origin at the current time step. Expressed in the inertial frame.</li>
+<li>\(q_\mathcal{I}^\mathcal{B} \in \mathbb{S}^3\): The (passive) rotation of the UAV with respect to the inertial frame at the current time step.</li>
+<li>\(^\mathcal{I}l_i \in \mathbb{R}^3\): The position of stationary visual landmark \(i\) with respect to the inertial origin. Expressed in the inertial frame.</li>
+<li>\(^{\mathcal{C}_\mathcal{P}}p_i \in \mathbb{R}^2\): The measured pixel coordinates \(\begin{bmatrix}u_i &amp; v_i\end{bmatrix}^T\) of landmark \(i\) in the image plane. Expressed in the camera pixel frame.</li>
+<li>\(^{\mathcal{C}_\mathcal{P}}\hat{p}_i \in \mathbb{R}^2\): The <strong>theoretical</strong> pixel coordinates \(\begin{bmatrix}\hat{u}_i &amp; \hat{v}_i\end{bmatrix}^T\) of landmark \(i\) in the image plane, given the initial guess for the extrinsic camera parameters.</li>
+<li>\(f \in \mathbb{R}^2\): The focal lengths \(\begin{bmatrix}f_x &amp; f_y\end{bmatrix}^T\) of the camera.</li>
+<li>\(c \in \mathbb{R}^2\): The center pixels \(\begin{bmatrix}c_x &amp; c_y\end{bmatrix}^T\) of the camera’s image plane.</li>
+<li>\(s \in \mathbb{R}^1\): The skew of the camera, which defines horizontal shear of the pixels in the image plane.</li>
+<li>\(d \in \mathbb{R}^5\): The camera’s (radial) distortion parameters \(\begin{bmatrix}k_1 &amp; k_2 &amp; p_1 &amp; p_2 &amp; k_3\end{bmatrix}^T\). See the radial distortion model subsection for a more detailed explanation.</li>
+</ul>
+<p>In order for the optimization routine to be accurate, a reasonably high fidelity model of the camera sensor must be used in the calculations. The following sections define the camera model as well as the residual calculation for the nonlinear least-squares optimizer.</p>
+<h3 id="camera-model-transforming-to-the-camera-frame"><a class="header" href="#camera-model-transforming-to-the-camera-frame">Camera Model: Transforming to the Camera Frame</a></h3>
+<p>Given an inertial landmark position \(^\mathcal{I}l_i\), the landmark coordinates are transformed into the camera frame, simultaneously translating the origin to coincide with the origin of the camera frame using rigid body homogeneous transform matrices \(H_a^b \in SE(3)\). This requires projecting \(^\mathcal{I}l_i\) into homogeneous coordinates \(^\mathcal{I}\mathbf{l}_i \in \mathbb{R}^4\).</p>
+<p>As a short review, a homogeneous matrix \(H_a^b\) that transforms a point (expressed in homogeneous coordinates) from frame \(a\) to frame \(b\) is composed from the respective rotation matrix and translation vector:</p>
+<p>\(H_a^b = \begin{bmatrix}R_a^b &amp; R_a^{ba}x_b\\ 0 &amp; 1\end{bmatrix}.\)</p>
+<p>Homogeneous matrices can be multiplied together to get a resultant transform matrix, as with rotation matrices. Thus, \(H_\mathcal{I}^\mathcal{C}\) (or \(H(\mathcal{I}\rightarrow\mathcal{C})\)) can be created by creating homogeneous matrices from \(\mathcal{I}\rightarrow\mathcal{B}\) and \(\mathcal{B}\rightarrow\mathcal{C}\) and composing them together.</p>
+<p>Thus, given the shorthand assignments</p>
+<p>$$\chi =~^\mathcal{C}\mathbf{l}_{x,i},$$</p>
+<p>$$\gamma =~^\mathcal{C}\mathbf{l}_{y,i},$$</p>
+<p>$$\zeta =~^\mathcal{C}\mathbf{l}_{z,i},$$</p>
+<p>$$^\mathcal{C}\mathbf{l}_i = \begin{bmatrix} \chi &amp; \gamma &amp; \zeta &amp; 1\end{bmatrix}^T,$$</p>
+<p>$$ ^\mathcal{I}\mathbf{l}_i = \begin{bmatrix}^\mathcal{I}l_i &amp; 1\end{bmatrix}^T,$$</p>
+<p>$$ ^\mathcal{C}\mathbf{l}_i = H(\mathcal{I}\rightarrow\mathcal{C})^\mathcal{I}\mathbf{l}_i.$$</p>
+<p>For convenience in subsequent operations, we project \(^\mathcal{C}\mathbf{l}_i\) back onto \(\mathbb{R}^3\) and divide all components by the z-component:</p>
+<p>$$ ^\mathcal{C}l_i = \begin{bmatrix}\chi/\zeta &amp; \gamma/\zeta &amp; 1\end{bmatrix}^T $$</p>
+<h3 id="camera-model-radial-distortion"><a class="header" href="#camera-model-radial-distortion">Camera Model: Radial Distortion</a></h3>
+<p>In our camera measurement model, it is assumed that the UAV camera lens imposes some kind of radial distortion on measured pixel features:</p>
+<p><img src="img/distortion_examples.png" title="Radial distortion illustration" alt=""></p>
+<p>Thus, in the model, radial distortion is applied to the point \(^\mathcal{C}l_i\) before it is projected onto the camera pixel plane.</p>
+<p>Given a <em>distorted</em> feature location in the camera frame \(^\mathcal{C}l_{i,d}\), the corresponding <em>undistorted</em> feature location in the camera frame \(^\mathcal{C}l_i\) is obtained according to the following radial undistortion model:</p>
+<p>Given the shorthand assignments</p>
+<p>$$\chi =~^\mathcal{C}l_{x,i},$$</p>
+<p>$$\gamma =~^\mathcal{C}l_{y,i},$$</p>
+<p>$$\mathcal{X} =~^\mathcal{C}l_{i,d,x},$$</p>
+<p>$$\mathcal{Y} =~^\mathcal{C}l_{i,d,x},$$</p>
+<p>$$ g = 1 + k_1(\mathcal{X}\mathcal{Y})^2 + k_2(\mathcal{X}\mathcal{Y})^4 + k_3(\mathcal{X}\mathcal{Y})^6, $$</p>
+<p>$$ \chi = g(\mathcal{X} + 2p_1\mathcal{X}\mathcal{Y}+p_2\mathcal{X}^2(\mathcal{Y}^2+2)), $$</p>
+<p>$$ \gamma = g(\mathcal{Y} + 2p_2\mathcal{X}\mathcal{Y}+p_1\mathcal{Y}^2(\mathcal{X}^2+2)). $$</p>
+<p>To do the reverse and apply distortion to \(^\mathcal{C}l_i\), the undistortion model must be inverted. The model cannot be inverted explicitly, so we iteratively invert it using <a href="https://en.wikipedia.org/wiki/Newton%27s_method#Nonlinear_systems_of_equations">Newton’s method of function minimization in multiple dimensions</a>.</p>
+<h3 id="camera-model-pinhole-projection"><a class="header" href="#camera-model-pinhole-projection">Camera Model: Pinhole Projection</a></h3>
+<p>Having obtained the distorted feature location in the camera frame, a pinhole projection model is used to obtain the distorted feature <em>pixel</em> location in the camera image plane. The projection model comes from similar triangles and the definition of horizontal shear:</p>
+<p>Given the shorthand assignments</p>
+<p>$$\mathcal{X} =~^\mathcal{C}l_{i,d,x},$$</p>
+<p>$$\mathcal{Y} =~^\mathcal{C}l_{i,d,x},$$</p>
+<p>$$ u_i = f_x \mathcal{X} + s \mathcal{Y} + c_x, $$</p>
+<p>$$ v_i = f_y \mathcal{Y} + c_y. $$</p>
+<p>Giving the theoretical camera measurement \(^{\mathcal{C}_\mathcal{P}}\hat{p}_i\).</p>
+<h3 id="residual-calculation"><a class="header" href="#residual-calculation">Residual Calculation</a></h3>
+<p>The calibration process uses nonlinear optimization techniques to minimize the following cost function:</p>
+<p>$$ J = \sum_t^T\sum_i^Ne^2, $$</p>
+<p>where the error is defined as the difference between the camera measurement \(^{\mathcal{C}_\mathcal{P}}p_i\) and its theoretical, predicted counterpart for each landmark \(i\) and time step \(t\) in the flight trajectory. All actual camera measurements are given as inputs to the optimizer, which modifies its guess for the extrinsic camera parameters to minimize the cost function.</p>
+<p>It is not necessary for a residual to be calculated at every possible \((i,t)\) combination for the optimization to work, though a wide breadth of measurements and a varied flight path increase the chances of convergence.</p>
+<h2 id="the-code-and-the-experiments"><a class="header" href="#the-code-and-the-experiments">The Code and the Experiments</a></h2>
+<p>The entire implementation of the above theory is found in my <a href="https://github.com/goromal/camera-extrinsics-calibrator">Github repository</a>, which contains the following:</p>
+<ul>
+<li>Fully functioning UAV simulator with camera and inertial sensors.</li>
+<li>Camera extrinsics calibrator.</li>
+<li>Matlab tools for visualization.</li>
+</ul>
+<p>The main executable contains two unit tests. The first unit tests demonstrates the calibration process with a simulated UAV trajectory, and the second unit test performs the calibration with actual hardware data from a small UAV. The code base is straightforward to set up for anyone who has experience with CMake.</p>
+<h2 id="conclusions-1"><a class="header" href="#conclusions-1">Conclusions</a></h2>
+<p>Currently, it is assumed that the provided visual landmark positions are absolutely true, so they are held as constant parameters by the optimizer. This might be disadvantageous in practice. It is possible that setting the landmark positions as additional decision variables for the optimizer could amend things, though it would probably help to specify additional geometric constraints pertaining to the landmark positions to help the optimizer converge. Additionally, <a href="http://ceres-solver.org/"><em>Ceres</em></a>, the optimizer library used in this calibration routine, has loss function tools for outlier rejection that have not currently been explored in this application and may be useful.</p>
+<p>Taking on this project inspired me to delve more deeply into the world of computer vision and its connections to autonomy on all levels, from state estimation to control and higher-level reasoning.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ceres-solver-tutorial"><a class="header" href="#ceres-solver-tutorial">Ceres Solver Tutorial</a></h1>
+<p>Tutorial and experiments in pose graph optimization (PGO) with Ceres.</p>
+<p><strong><a href="https://andrewtorgesen.com/notes/Autonomy/Systems_Implementation/Optimization_Libraries/Ceres_Solver_Python_Tutorial.html">Try out the tutorial!</a></strong></p>
+<p><img src="img/pgo.png" title="Pose Graph Optimization" alt=""></p>
+<p>I completed this personal project in my free time while in graduate school, where part of my research involved multi-agent collaborative localization and mapping. One of the most popular backend optimizers for simultaneous localization and mapping (SLAM) is <a href="http://ceres-solver.org/">Ceres Solver</a>, Google’s nonlinear least squares solver. Ceres is a C++ library, but in the interest of rapid prototyping multi-agent SLAM scenarios, I contributed to some <a href="https://github.com/Edwinem/ceres_python_bindings">open source Python bindings</a> for the solver and also made Python wrappers of my C++ geometry library and corresponding <a href="https://github.com/goromal/ceres-factors">measurement factor implementations</a>.</p>
+<p>With these Python bindings, I took things one step further and wrote up <a href="https://andrewtorgesen.com/notes/Autonomy/Systems_Implementation/Optimization_Libraries/Ceres_Solver_Python_Tutorial.html">this tutorial with several robotics estimation examples</a> with the two-fold goal of teaching my lab mates about Ceres and learning more of the nuanced details of the library. I put together the slides above to present the tutorial to my lab, introducing the challenges of optimization on the manifold and how Ceres can be used to solve SLAM-related problems. The presentation sparked interest from the lab, and one research project actually subsequently incorporated the Python wrappers into its SLAM algorithm prototyping efforts. The libraries I developed for this effort have continued to be useful in my personal projects through the years, validating the original effort I invested into their documentation and correctness.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="multi-agent-slam-for-radiological-search"><a class="header" href="#multi-agent-slam-for-radiological-search">Multi-agent SLAM for Radiological Search</a></h1>
+<p>Research that I did for the Department of Energy.</p>
+<p><img src="img/slam_coverage.gif" title="SLAM coverage algorithm" alt=""></p>
+<p>This work is further expounded on in my <a href="https://andrewtorgesen.com/res/thesis.pdf">Master’s Thesis</a>.</p>
+<hr>
+<p><a href="http://acl.mit.edu/projects/cslam-rad-search">Project Page</a></p>
+<hr>
+<h2 id="abstract"><a class="header" href="#abstract">Abstract</a></h2>
+<p>Remote sensing capability for radiological source localization and mapping is needed in dangerous areas containing one or more radiation sources of unknown location and magnitude. Such scenarios can arise during first-response operations, facilities surveillance, and disaster prevention. Unmanned air vehicles provide an ideal platform for traversing arbitrary terrain when equipped with specialized, lightweight radiation sensors. Previous attempts at remote sensing for radiological search and mapping with air vehicles have focused on single-agent architectures, limiting potential coverage range and time efficiency. Additionally, it is usually assumed that the search environment has been mapped beforehand and that the agent’s pose within the search map is universally known, which is often not realistic in time-critical disaster response scenarios or in urban and indoor environments. Past work has demonstrated that the resolution of radiological sensing on a mobile agent platform is greatly improved when fused with agent pose estimates and 3-dimensional map information, which necessitates SLAM capabilities in previously unknown environments. It is conceivable that in a multi-agent setting, a high-resolution sensor such as LiDAR could provide the needed 3D mapping, though its prohibitive weight and cost would limit its ability to be placed on multiple vehicles, leading to dependence on the coverage ability of a single agent and a single failure point. This work aims to expand remote sensing capabilities for radiological source localization by developing and demonstrating a multi-agent collaborative SLAM solution utilizing lightweight depth cameras and a sparse communication network. The decentralization of perception capability facilitates greater robustness, more rapid and widespread mapping ability, and applicability to a larger variety of real-world environments. The effectiveness of the collaborative SLAM platform in facilitating multi-agent radiological search is to be presented and compared with a single-LiDAR architecture both in simulation and on a hardware test platform provided by Lawrence Berkeley National Laboratory.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="real-time-semantic-segmentation"><a class="header" href="#real-time-semantic-segmentation">Real-Time Semantic Segmentation</a></h1>
+<p>Class project for a Machine Learning course at MIT.</p>
+<p><img src="img/target_train.png" title="Segmentation" alt=""></p>
+<hr>
+<p><a href="https://andrewtorgesen.com/res/6.862%20Final%20Project%20Report.pdf">Project Paper</a></p>
+<hr><iframe width="560" height="315" src="https://www.youtube.com/embed/6axVA-JcRvs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>This project seeks to improve the trade-off between run-time and accuracy of <a href="https://arxiv.org/abs/2007.03815">FANet</a>, a (at the time of this project) state-of-the-art algorithm aimed at real-time image segmentation on video streams. The trade-off is characterized before and after augmenting FANet to include temporal context aggregation: an extension of self-attention that considers multiple consecutive image frames during both training and inference.</p>
+<p>To this end, the original FANet algorithm is re-produced and trained using the CityScapes dataset (20 classes) for validation of the base implementation. Subsequently, the temporal context aggregation augmentation to FANet is presented. The agumented FANet implementation is then trained and tested on both single-frame images and video streams from a segmentation dataset created using AirSim (11 classes). Results are presented for each scenario, comparing the segmentation speed (FPS) and performance (in mean-intersection-over-union, or mIoU %) of the re-implemented FANet with the results presented in the original paper, as well as a leader board for image segmentation on the CityScapes dataset.</p>
+<p>The presented results and analysis suggest that temporal context aggregation is not expressive enough to consistently provide performance improvements.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="7-dof-robot-arm-particle-filter"><a class="header" href="#7-dof-robot-arm-particle-filter">7-DOF Robot Arm Particle Filter</a></h1>
+<p>An investigation into non-parametric belief state representations.</p>
+<h2 id="motivation-2"><a class="header" href="#motivation-2">Motivation</a></h2>
+<p>In robotics, the problem of finding an Inverse Kinematics (IK) solution given an end effector pose is one which requires solving non-linear equations whose solutions are often not unique. In fact, it is often not even possible to find an analytical solution when the number of degrees of freedom exceeds the dimensionality of the task space.</p>
+<p>Moreover, “soft robots,” or penumatically powered arms constructed from fabric or rubbery material, are gaining popularity in robotics research. They show promise for working alongside humans without posing a threat in the event of accidental collisions due to their pliability.</p>
+<p><img src="img/softarm.gif" title="Soft robot arm." alt=""></p>
+<p>Without the use of a motion capture system, it is difficult to measure the joint positions of these robot arms directly, due to the absence of encoders.</p>
+<p>The purpose of this project was to attempt to find a way to estimate the joint states of a robot using rudimentary dynamic models while dealing with the ambiguities inherent to the IK problem. My goal was to implement the joint state estimation algorithm on a rigid robot arm platform (named <a href="https://robots.ieee.org/robots/baxter/">Baxter</a>) using methods that could be ported over to a soft robot arm platform in future work.</p>
+<h2 id="the-particle-filter"><a class="header" href="#the-particle-filter">The Particle Filter</a></h2>
+<p>For this project, I proposed the use of a Sampling Importance Resampling (SIR) particle filter to solve the IK problem for a physical 7-degree-of-freedom (7-DOF) robot arm over a trajectory given initial joint angles, (noisy) joint torque inputs, and end effector pose measurements.</p>
+<p>The ability of the particle filter to represent multimodal belief states makes it well-suited to tackle the problem of estimating joint configurations, unlike tools such as the Kalman Filter, which requires beliefs to resemble Gaussian probability distributions. The filter represents arbitrary distributions non-parametrically with weighted clusters of particles, as shown below:</p>
+<p><img src="img/multimodal.png" title="Non-parametric representation of a multimodal probability distribution." alt=""></p>
+<p>In that sense, the particle filter looks a little bit like a genetic algorithm.</p>
+<p>Loosely, the particle filter resembles a typical Bayesian filter in that it computes a prior distribution by propagating a dynamic model (the very first belief state can be a uniform distributions with particles spread through the sample space), then computes a posterior distribution given a measurement at each time step. Importantly, however, the dynamic and measurement models need not be linear, and the computations are done on each individual particle.</p>
+<p>As one can imagine, having a greater number of particles tends to lead to both better and slower results. Thus, after the update step has been applied, a resampling step can be carried out to replace outliers and decrease the computational load being wasted on propagating “unfruitful” particles. This is especially relevant for Bayesian filtering with a dynamic model (as opposed to static filtering), where many particles can become obsolete trying to hit a moving state-space target after only a few iterations. The update/resampling step is pictured below:</p>
+<p><img src="img/particleIK.png" title="Resampling update step of the particle filter." alt=""></p>
+<p>Putting everything together, the algorithm at each time step looks roughly like this:</p>
+<ol>
+<li>Initialize particles concentrated around the given initial joint state in the joint configuration space</li>
+<li>For each time step:
+3. Using the joint torques, propagate the particles forward in time with a dynamic model that has Monte Carlo-like variations in parameters for each particle (resembling mutation in a genetic algorithm)
+4. Calculate the forward kinematics of each particle and compare the result with the measured end effector pose
+5. Use the results from (4.) to assign new probability weights to each particle
+6. Resample and normalize particle weights as needed</li>
+</ol>
+<h2 id="experiment-and-results"><a class="header" href="#experiment-and-results">Experiment and Results</a></h2>
+<p>With the particle filter algorithm, I used the Baxter hardware platform to carry out a trajectory, collecting measurement data of the initial joint states, the end effector pose measurements, and the joint torques. For each time step in post-processing, the particle filter used the joint torques to predict the new joint configuration given the previous state, and the end effector pose measurements were used to refine the prediction in an update step. A resampling method was used to throw out outlier particles at each time step to decrease computation time. Additionally, I added noise to the joint torque input data to demonstrate the robustness of the filter.</p>
+<p>Here are the results, which compare the performance of the full particle filter with the performance of simply using the dynamic model to calculate joint states from joint torques:</p>
+<p><img src="img/report_fig.svg" title="Particle filter joint state estimation performance for all 7 of Baxter&#39;s joints." alt=""></p>
+<p>As an alternative illustration of the particle filter performance, here’s an animation comparing how Baxter <em>actually moved</em> (\(x\)) over the course of the trajectory with how the particle filter <em>thought it moved</em> (\(\hat{x}\)) based on its estimates:</p>
+<p><img src="img/armComparison.gif" title="Reconstructed robot arm trajectory from particle filter estimates." alt=""></p>
+<p>Though the results of the particle filter weren’t perfect, they were certainly better than the dynamic model alone. It should also be noted that this was my first time designing, implementing, and tuning a particle filter, so that certainly could have skewed the results. It is also cool to note that because the particle filter did not have to invert any matrices in its algorithm, it behaved well near robot arm singularities.</p>
+<p>All in all, the particle filter algorithm shows promise for future applications for soft robot arms and other platforms where dynamic input parameters (such as joint torques and velocities) and end effector pose measurements are more readily available than direct joint state measurements.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ship-airwake-measurement-system"><a class="header" href="#ship-airwake-measurement-system">Ship Airwake Measurement System</a></h1>
+<p>Research that I did for the Office of Naval Research.</p>
+<p><img src="img/indoor_tethered.gif" title="Indoor tethered flight" alt=""></p>
+<p>This work is further expounded on in my <a href="https://andrewtorgesen.com/res/thesis.pdf">Master’s Thesis</a>.</p>
+<hr>
+<p><a href="https://andrewtorgesen.com/res/AerowakeConfPaper.pdf">Conference Paper</a></p>
+<p><a href="http://acl.mit.edu/projects/ship-aerowake-measurement-system">Project Page</a></p>
+<hr>
+<h2 id="abstract-1"><a class="header" href="#abstract-1">Abstract</a></h2>
+<p>Obtaining experimental air flow data for validating computational models of ship air wakes is critical to addressing current challenges associated with recovering maritime aircraft using naval vessels.
+Small unmanned aircraft are desirable for this task due to their maneuverability and minimal invasiveness in terms of installation and usage.
+This paper presents a small, tethered, unmanned aircraft system capable of providing high-resolution air wake measurements behind a moving maritime vessel under a wide variety of wind conditions.
+The air wake measurement task is accomplished by having the aircraft autonomously sweep behind the moving vessel at various altitudes while collecting both air flow data from an omnidirectional probe and relative state measurements.
+Relative state measurements are obtained through a sensor fusion scheme involving differential GPS and vision-based pose measurements from an infrared beacon array mounted on the ship deck.
+The proposed system is able to deduce both the steady-state and turbulent components of the air wake stream as a function of position relative to the ship without the need for rigorous sensor calibration.
+Results demonstrating the robustness of the tethered flight and relative state estimation schemes to a relative wind speed of up to 10 m/s are obtained with motion-capture-validated simulation testing as well as indoor testing in hardware.
+Near-term future work will include conducting outdoor field experiments to show the effectiveness of the platform as a high-resolution in-situ air wake measurement system.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="random"><a class="header" href="#random">Random</a></h1>
+<ul>
+<li><a href="#budget-visualizer">Budget Visualizer</a></li>
+<li><a href="#3d-iphone-path-viewer">Hike Path Viewer</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="budget-visualizer"><a class="header" href="#budget-visualizer">Budget Visualizer</a></h1>
+<p>Visualize a spreadsheet budget with Sankey Diagrams in the browser.</p>
+<p>This project was inspired by a cool post that I saw on <a href="https://www.reddit.com/r/dataisbeautiful/comments/adhzrw/watch_my_money_flow_an_animated_representation_of/">Reddit</a>, as well as by a personal need. I wanted to create a “visual aid” to accompany my standard budgeting spreadsheet that could communicate spending habits in a non-provocative (<em>no numbers, just colors and shapes</em>) and interesting way:</p>
+<p><img src="img/sankey.gif" title="Budget Visualization" alt=""></p>
+<p>To create the visualization, I modified existing JavaScript code which animates a Sankey diagram loaded from a json file. Most of the work went into writing a script which loads data from my Google Sheets budget and converts it into a Sankey json file.</p>
+<p>In general, I can see this project’s being useful for visualizing many different processes that can be characterized by acyclic graphs. Some examples may include energy consumption, traffic flow, or even the iterative convergence on an optimal belief state with a non-parametric representation, as with a particle filter or a genetic algorithm.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="3d-iphone-path-viewer"><a class="header" href="#3d-iphone-path-viewer">3D iPhone Path Viewer</a></h1>
+<p>An in-browser simple app for visualizing GPS trajectories superimposed on a 3D map.</p>
+<p><img src="img/map_cover.jpeg" title="Hike to Winnemucca." alt=""></p>
+<h2 id="motivation-3"><a class="header" href="#motivation-3">Motivation</a></h2>
+<p>My family loves to go on hikes in mountainous and scenic locations. Intrigued by the possibilities of localization technology, and realizing that I had a decent position estimator in my pocket, I decided to create a web app that allows you to easily visualize paths you have traversed, all superimposed on a 3D map. With this web app, now I can quickly pull up a visualization of a recently completed adventure on any device with a browser and showcase it to all the participants, which I thoroughly enjoy.</p>
+<p>It only took a couple of days to put together, thanks to the wonders of web development libraries (such as <a href="https://cesiumjs.org">Cesium</a>) readily available for remote access. All I had to do was write the base html environment, rules for Cesium camera view changes, a user interface for uploading and checking csv files, and an algorithm for converting valid csv files to dynamically loadable kml resources.</p>
+<p>Besides the slightly niche yet personally satisfying application, this project exposed me more to JavaScript and its role in web development. I find the Node framework to be a provocatively modular and concise tool for app development, and the notion of developing code to run in the browser is becoming increasingly attractive to me for personal projects.</p>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p>This web app is designed to be used with the <a href="http://sensorlog.berndthomas.net">Sensor Log</a> iOS app, which utilizes the sensor suite on the iPhone to log a wide variety of inertial and other sensor data in csv files.</p>
+<p>If you have the app and want to use it with the 3D iPhone Path Viewer, you must ensure that the following is set in the Settings:</p>
+<ol>
+<li>“csv” is selected for the file output format (not “JSON”).</li>
+<li>The log delimiter must be a comma.</li>
+<li>Probably make sure that the recording rate isn’t too fast (I tend to record with a sampling time of 20 seconds for long walks, 5 seconds for short drives, etc.) to avoid excessively large csv log files.</li>
+<li>Ensure that the “CL” record field is toggled on. This is the data that the web app will visualize.</li>
+</ol>
+<p>Once a csv has been recorded and exported, it can be loaded and visualized directly on the web app page, linked to at the top of this page.</p>
+<p>If you don’t have the Sensor Log app and want to try the path viewer out anyway, all you need is a csv file with the following format requirements:</p>
+<ol>
+<li>Comma-delimited.</li>
+<li>Column labels are in row 1 with the strings <code>locationLatitude(WGS84)</code> <code>locationLongitude(WGS84)</code> <code>locationAltitude(m)</code> (don’t include the quotes).</li>
+<li>Latitude and longitude are given in decimal-degree format.</li>
+<li>Altitude is given in meters, relative to sea level.</li>
+</ol>
+<p>Here’s a path I recorded a couple of years ago on a hike to Lake Winnemucca, visualized in my iPhone’s browser:</p>
+<p><img src="img/winhike.jpeg" title="Hike to Winnemucca." alt=""></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="systems"><a class="header" href="#systems">Systems</a></h1>
+<ul>
+<li><a href="#fixed-wing-micro-air-vehicle-simulation">Fixed-Wing MAV Sim</a></li>
+<li><a href="#ros-ground-station">ROS Ground Station</a></li>
+<li><a href="#auvsi-suas-unmanned-aircraft-competition">Unmanned Aircraft Competition</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="fixed-wing-micro-air-vehicle-simulation"><a class="header" href="#fixed-wing-micro-air-vehicle-simulation">Fixed-Wing Micro Air Vehicle Simulation</a></h1>
+<p><img src="img/FWSim.png" alt=""></p>
+<p>This was a ground-up implementation of simulation and autonomy algorithms in Matlab and Simulink, from dynamic modeling to path planning. In total, this was a culminating implementation of every chapter in the book <a href="https://github.com/byu-magicc/mavsim_public">Small Unmanned Aircraft: Theory and Practice</a> by Beard and McLain (2012).</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0BfB8B8sClY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ros-ground-station"><a class="header" href="#ros-ground-station">ROS Ground Station</a></h1>
+<p>A ROS-based GUI for communicating with a fixed-wing UAV.</p>
+<p><img src="img/GroundStation.png" alt=""></p>
+<hr>
+<p>\( \ddagger \) <a href="https://github.com/goromal/ros_groundstation">Link to Github Repository</a>  \( \ddagger \)</p>
+<hr>
+<p>In recent years, the Multi-Agent Intelligent Coordination and Control (<em>MAGICC</em>) Lab at Brigham Young University developed a fully functional fixed-wing autopilot called <a href="https://github.com/byu-magicc/rosplane">ROSPlane</a>. As its name suggests, ROSPlane’s modular autopilot algorithms (as laid out in <em>Unmanned Aircraft: Theory and Practice</em> by Beard &amp; McLain) function as nodes in the Robot Operating System (<em>ROS</em>) distributed computing environment. As such, communication with the autopilot is best carried out over a ROS network, as described <a href="http://wiki.ros.org/ROS/NetworkSetup">here</a>.</p>
+<p>Before becoming a member of the MAGICC Lab, I volunteered for a competition team that chose to utilize the fledgling ROSPlane to be the brains of a unmanned air vehicle capable of flying waypoints and capturing visual targets on the ground. As a team, we were limited to communicating with our autopilot over rosservice calls and publish commands via a ground station computer command line interface. We lacked the convenience and functionality of a graphical user interface (<em>GUI</em>) such as <a href="http://ardupilot.org/planner/">Mission Planner</a>. I took it upon myself to create a GUI from scratch in Python, akin to Mission Planner, that was easily extendible and built on ROS. Months of work yielded a fully-functional and sleek GUI with the following features:</p>
+<ul>
+<li><strong>Flight Map:</strong> Using .xml configuration file to specify pre-loaded maps, a drop down menu allows for toggling between satellite views of flight locations. The aircraft is rendered on top of the map, along with contours representing the current path and points representing current waypoints.</li>
+<li><strong>Configuration Menus:</strong> Pop-Up menus allow for creating waypoints by clicking on the Flight Map, typing into text fields, or loading from a file, sending them to the aircraft, and changing ROS subscriber parameters in real time.</li>
+<li><strong>Artificial Horizon:</strong> This window renders a cockpit view of the aircraft’s attitude, altitude, and airspeed. Important information regarding GPS connectivity and autopilot status is also displayed.</li>
+<li><strong>Tuning Plots:</strong> Various plots are available for comparing commanded vs. actual values for Airspeed, Course Angle, Pitch, and Roll. The plots are useful for tuning the inner and outer loops of the longitudinal and lateral autopilots.</li>
+</ul>
+<p>Because the GUI runs on ROS, it functions as a useful debugging tool as well as real time ground station. Recorded ROSBags can be played back and entire flights can be re-visualized with this tool. A screenshot of the GUI under typical usage is shown below:</p>
+<p><img src="/images/projects/GroundStation.png" title="Ground Station GUI Interface" alt=""></p>
+<p>The original ground station was written for ROS Indigo, which only runs on Ubuntu 14.04. I heard word that there were a couple of students at BYU who were trying to adapt my ground station to Ubuntu 16.04, but were not successful. Looking into it myself, I found that the library I was using to render satellite maps was deprecated in 16.04. At the same time, general demand for the ground station in the MAGICC Lab was increasing, which would require and upgrade of the software to 16.04.</p>
+<p>After considering my options, I decided that the best long-term solution was to make the GUI as independent from third-party libraries, aside from well-supported Python libraries, as possible. This entailed building my own map management tool using only basic python libraries. This proved to be a fun project in itself, and involved extensive usage of geodesic math and image patching libraries. Below is an example of a function I wrote which creates a map image at a specified latitude, longitude, and zoom level from a bunch of pre-downloaded map tiles:</p>
+<pre><code class="language-python">def fetch_tiles(self):
+       # find out which i, j values correspond to each corner
+       min_i, max_j = self.localize_point(self.southwest, self.mz_obj.min_latlon, self.mz_obj.max_latlon)
+       max_i, min_j = self.localize_point(self.northeast, self.mz_obj.min_latlon, self.mz_obj.max_latlon)
+
+       # fetch and paste images onto a big canvas
+       bigsize_x = (max_i - min_i + 1) * TILEWIDTH
+       bigsize_y = (max_j - min_j + 1) * TILEHEIGHT
+       bigimage = self.new_image(bigsize_x, bigsize_y)
+
+       for i in range(min_i, max_i + 1):
+           for j in range(min_j, max_j + 1):
+               tile = self.grab_tile(i, j)
+               self.paste(bigimage, tile, (i-min_i)*TILEWIDTH, (j-min_j)*TILEHEIGHT)
+
+       upper_left_center = self.mz_obj.tiles[min_i][min_j]
+       upper_left_lon = GoogleMapPlotter.pix_to_rel_lon(upper_left_center.lon, int(-TILEWIDTH/2), self.zoom)
+       upper_left_lat = GoogleMapPlotter.pix_to_rel_lat(upper_left_center.lat, int(-TILEWIDTH/2), self.zoom)
+
+       self.x_offset = GoogleMapPlotter.rel_lon_to_rel_pix(upper_left_lon, self.west, self.zoom)
+       self.y_offset = GoogleMapPlotter.rel_lat_to_rel_pix(upper_left_lat, self.north, self.zoom)
+
+       return bigimage
+</code></pre>
+<p>With those final changes, the GUI is now entirely dependent on Python libraries. Porting it over to Ubuntu 18.04 proved to be a trivial task, and the simplicity of the API led to its being used in graduate-level courses pertaining to flight dynamics and control, as well as various research projects in the MAGICC Lab, which I’m proud of.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="auvsi-suas-unmanned-aircraft-competition"><a class="header" href="#auvsi-suas-unmanned-aircraft-competition">AUVSI-SUAS Unmanned Aircraft Competition</a></h1>
+<p>Undergraduate Capstone Project.</p>
+<p><img src="img/auvsi-plane.png" alt=""></p>
+<hr>
+<p><a href="https://andrewtorgesen.com/res/TechnicalDesignPaper.pdf">System-Level Technical Design Paper</a></p>
+<hr><iframe width="560" height="315" src="https://www.youtube.com/embed/8mwPEsZdfLQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<p>For my final “Capstone” project of my undergraduate studies in Mechanical Engineering, I assumed the role of team captain on my school’s competition team for the international <a href="https://www.auvsi-suas.org">AUVSI-SUAS</a> unmanned aircraft competition. Due to the specialized nature and demands of the competition, admission to the team was through application and selection. Because of this, much of the top talent in the Mechanical, Electrical, and Computer Engineering departments was found on the team, united by a passion for controls, autonomy, and aviation.</p>
+<p>For the competition, our challenge was to, over the span of 10 months, design and build an unmanned aircraft platform that could do the following:</p>
+<ul>
+<li>Take off, land, and fly waypoints on a miles-long flight path while avoiding static and dynamic obstacles without any human intervention.</li>
+<li>Search a large area for visual targets on the ground and capture images of the targets.</li>
+<li>Autonomously classify the letter, shape, and color of each visual target.</li>
+<li>Drop a payload from at least 100 feet up onto a goal location, preserving the structural integrity of the payload.</li>
+<li>Take mission-level commands from a ground station in real-time.</li>
+</ul>
+<p>Our team, which consisted 12 members, was faced with the monumental task of designing, building, and documenting for future teams an interconnected system capable of accomplishing all competition requirements, which span the fields of computer science, path planning, computer vision, control theory, machine learning, aerospace design, electrical engineering, and robotics.</p>
+<p>Although the subject matter and learning curves were daunting, we were also all very motivated and hard-working individuals. Each member of the team could be trusted to learn the requisite material and tools to accomplish everything that we needed to. As a matter of fact, as the months wore on, it became clear that the real challenge associated with the project was to keep the effort organized, focused, efficient, and well-engineered. So, although at first I focused most of my efforts on matters pertaining to the autopilot and the higher level path planning and estimation algorithms, my role gradually evolved to something much more similar to a high-level Systems Engineer.</p>
+<p>Thus, what was unique about this project for me was that the sheer breadth of talent available to tackle the task allowed me to become focused less on low-level details and more on high-level project management principles from an engineering perspective. Instead of focusing exclusively on engineering the autonomy-related subsystems, I was able to take on the following roles:</p>
+<ul>
+<li>Working with representatives of sub-teams for the vision, payload, airframe, and control subsystems to ensure subsystem compatibility and refine the overall system design.</li>
+<li>Working with the different sub-teams to design the high-level algorithms for computer vision, controls, state estimation, and path planning.</li>
+<li>Working with sub-team representatives to establish goals and a timeline for the project to the date of the competition, refining and adapting when needed.</li>
+<li>Designing and overseeing testing procedures for software, hardware, and a combination of both to validate their performance and make sure they were on track to accomplish the competition goals.</li>
+<li>Leading in-field flight tests and analyzing collected data to improve the flight tracking performance.</li>
+<li>Helping individuals on the team to find their most promising areas for contributing to the effort in a way that was satisfying to them.</li>
+<li>Designing a framework for systematic team-wide documentation of the subsystem designs and testing efforts.</li>
+<li>Mentoring the controls/autonomy subteam in their efforts to climb the enormous learning curve.</li>
+</ul>
+<p>While there were many challenges and idiosyncratic personalities to work with along the way, the competition effort was very stimulating and rewarding for everyone on the team. We ended with a system we were proud of–check it out in the technical design paper if you’re interested–and performed very well at the competition, stacking up against schools who already had a storied history with the effort in past years. And although I love the work of the nitty gritty in engineering as much as anyone, I was especially grateful that my level of relevant experience afforded me the chance to focus on the more human elements of a large engineering undertaking in a leadership capacity. None of it would have been possible without my very talented teammates, and working in a capacity where I could try to help bring out the best in them ended up being what I enjoyed the most from this capstone project.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-a0b12cfe.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
